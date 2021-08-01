@@ -9,7 +9,7 @@ Bidders can contact the original poster with any inquiries.
 
 schema
 
-![Data-Flow](https://imgur.com/tWGa9n0)
+![imageAlt](https://imgur.com/tWGa9n0)
 
 Team Expectations: https://docs.google.com/document/d/1qZNkbr4kBtDA72sl9xWuOMZ0nyU9gPjKFRz2DB21vVI/edit?usp=sharing
 
