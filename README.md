@@ -18,7 +18,7 @@ MVP:
 - Displaying listings
 - Styling with flexbox/grid
 - Detail page for individual listings
-- Users can post and update their listings
+- Users can post, update, delete their listings
 
 PMVP:
 - Modal for form of contact
