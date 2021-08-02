@@ -1,12 +1,16 @@
-import { Router } from "express"
-import { signUp, login, verify } from "../controllers/user.js"
+import { Router } from 'express';
+import { signUp, signIn } from '../controllers/users.js';
 
-const router = Router()
 
-router.post("/sign-up", signUp) // CREATE
-router.post("/login", login) //CREATE
-router.get("/verify", verify) // READ
-// router.put("/update-info", updateInfo) // UPDATE
-// router.delete("/users/:id", deleteUser) //DELETE
+const router = Router();
 
-export default router
+//sign up: POST
+router.post('/sign-up', signUp)
+//sign in: POST
+router.post('/sign-in', signIn)
+//Verify: GET
+router.get('/verify')
+//Change Password: POST
+// router.post('/change-password')
+
+export default router;

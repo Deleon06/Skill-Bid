@@ -1,9 +1,9 @@
-import Post from "../models/post.js"
+import Post from "../models/post.js";
 
 export const getAllPosts = async (req, res) => {
   try {
-    const post = await Post.find({});
-    res.json(post);
+    const posts = await Post.find({});
+    res.json(posts);
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
@@ -16,7 +16,7 @@ export const getPost = async (req, res) => {
     if (post) {
       res.json(post);
     } else {
-      res.status(404).json({ error: "Todo not found" });
+      res.status(404).json({ error: "Post not found" });
     }
   } catch (e) {
     res.status(500).json({ error: e.message });
