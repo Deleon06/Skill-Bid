@@ -5,16 +5,17 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.5",
-    "morgan": "^1.10.0",
-    "type": "module"
+    "morgan": "^1.10.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "name": "Skill-Bid",
   "description": "## Overview A web based application that allows users to list a service/need and have potential freelance workers bid on their project/listing. A homepage that displays all active listings and has a filter/search to sort for more specific items based on the users capabilities. Users will be allowed to click on the listing(s) and bid on them as long as they are currently signed in with their account.  Users can post listings and provide images|description|title|price|time-frame. Bidders can contact the original poster with any inquiries.",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AleksandrGorbach/Skill-Bid.git"
