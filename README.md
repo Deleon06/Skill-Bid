@@ -7,7 +7,7 @@ Users will be allowed to click on the listing(s) and bid on them as long as they
 Users can post listings and provide images|description|title|price|time-frame.
 Bidders can contact the original poster with any inquiries. 
 
-schema
+![imageAlt](https://i.imgur.com/slBWrX1.png)
 
 ![imageAlt](https://i.imgur.com/tWGa9n0.png)
 
