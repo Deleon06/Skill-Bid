@@ -1,4 +1,4 @@
-# P3-Rep
+# Skill-Bid
 
 Overview:
 A web based application that allows users to list a service/need and have potential freelance workers bid on their project/listing.
