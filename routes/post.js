@@ -1,6 +1,6 @@
 import { Router } from "express";
 import restrict from "../helpers/restrict.js";
-import { getAllPosts, createPost, getPost } from "../controllers/todos.js";
+import { getAllPosts, createPost, getPost } from "../controllers/posts.js";
 
 const router = Router();
 // get all posts
