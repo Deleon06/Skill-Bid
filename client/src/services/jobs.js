@@ -1,8 +1,8 @@
 import api from './apiConfig'
 
-export const getAllTasks = async () => {
+export const getAllJobs = async () => {
     try {
-        const res = await api.get('/tasks')
+        const res = await api.get('/jobs')
         console.log(res)
         return res.data
     } catch(e) {
@@ -10,9 +10,9 @@ export const getAllTasks = async () => {
     }
 } 
 
-export const createTask = async (input) =>{
+export const createJobs = async (input) =>{
     try{
-        const res = await api.post("tasks", input)
+        const res = await api.post("/jobs", input)
         console.log(res.data)
     }catch(e) {
         throw e;
