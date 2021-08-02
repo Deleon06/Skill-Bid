@@ -80,6 +80,7 @@ export default mongoose.model("Job", JobSchema)
 | Landing Page | H | 3hrs | hrs | hrs |
 | Detail Page | H | 3hrs | hrs | hrs |
 | Gallery For Listings (Desktop) | H | 2hrs | hrs | hrs |
+| Adding Search Bar & Filter | M | 2 hrs | hrs | hrs |
 | Sign-in/Sign-up | H | 3hrs | hrs | hrs |
 | Modals | M | 3hrs | hrs | hrs |
 | Media Queries | M | 2hrs | 3hrs | 3hrs |
@@ -87,7 +88,7 @@ export default mongoose.model("Job", JobSchema)
 | Getting user feedback | M | 2hrs | 3hrs | 3hrs |
 | Testing functionality | H | 2hrs | 3hrs | 3hrs |
 | Mock Presentation(s) | M | 1hr | .5 hrs | .5 hrs |
-| Total | 35.5 | hrs | 
+| Total | 37.5 | hrs | 
 
 ## SWOT Anylsis
 Strength:
