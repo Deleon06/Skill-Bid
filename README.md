@@ -11,7 +11,7 @@ Bidders can contact the original poster with any inquiries.
 
 ![imageAlt](https://i.imgur.com/tWGa9n0.png)
 
-Team Expectations: https://docs.google.com/document/d/1qZNkbr4kBtDA72sl9xWuOMZ0nyU9gPjKFRz2DB21vVI/edit?usp=sharing
+[Team Expectations](https://docs.google.com/document/d/1qZNkbr4kBtDA72sl9xWuOMZ0nyU9gPjKFRz2DB21vVI/edit?usp=sharing)
 
 MVP:
 - Users should be able to sign-in/sign-out
