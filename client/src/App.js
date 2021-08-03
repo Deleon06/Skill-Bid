@@ -4,7 +4,7 @@ import Home from "./views/Home/Home"
 import SignUp from "./views/SignUp/SignUp"
 import SignIn from './views/SignIn/SignIn';
 import { verify } from './services/users';
-// import NewJob from "./views/NewJob/NewJob"
+import NewJob from "./views/NewJob/NewJob"
 
 function App() {
   const [user, setUser] = useState('')
@@ -15,6 +15,7 @@ function App() {
     }
     verifyUser()
   }, [])
+
   return (
     <div className="App">
       <Route exact path="/">
@@ -23,8 +24,11 @@ function App() {
       <Route path="/sign-in">
         <SignIn setUser={setUser} user={user} />
       </Route>
-      <Route path="/sign-in">
+      <Route path="/sign-up">
         <SignUp setUser={setUser} user={user} />
+      </Route>
+      <Route path="/NewJob">
+        <NewJob />
       </Route>
     </div>
   );

@@ -10,7 +10,7 @@ export const getAllJobs = async () => {
     }
 } 
 
-export const createJobs = async (input) =>{
+export const createJob = async (input) =>{
     try{
         const res = await api.post("/jobs", input)
         console.log(res.data)

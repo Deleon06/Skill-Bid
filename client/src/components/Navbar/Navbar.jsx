@@ -17,10 +17,11 @@ const Navbar = () => {
             </Hamburger>
             <Menu isOpen={isOpen}>
                 <MenuLink href="/">Home</MenuLink>
-                <MenuLink href="/New Post">New Post</MenuLink>
-                <MenuLink href="/Conatact">Contact</MenuLink>
+                <MenuLink href="/NewJob">New Post</MenuLink>
+                <MenuLink href="/ContactUs">Contact</MenuLink>
                 <About />
-                <MenuLink href="Sign-In">Sign-In</MenuLink>
+                <MenuLink href="/sign-in">Sign-In</MenuLink>
+                <MenuLink href="/sign-up">Sign-Up</MenuLink>
                 <About />
             </Menu>
         </Nav>
