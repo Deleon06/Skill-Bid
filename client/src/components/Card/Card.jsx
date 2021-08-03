@@ -7,23 +7,23 @@ export default function Card() {
     return (
         <div className="card-container">
             {jobs.map((job) => (
-                <div >
-                    {job.name}
+                <div className="job">
+                    Job{job.name}
                 </div>
             ))}
             {jobs.map((job) => (
-                <div>
-                    {job.jobtype}
+                <div className="type">
+                    Type{job.jobtype}
                 </div>
             ))}
             {jobs.map((job) => (
-                <div>
-                    {job.desription}
+                <div classname="description">
+                    Job Description{job.desription}
                 </div>
             ))}
             {jobs.map((job) => (
-                <div>
-                    {job.budget}
+                <div className="budget">
+                    Budget{job.budget}
                 </div>
             ))}
         </div>
