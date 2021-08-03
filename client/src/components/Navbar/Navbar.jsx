@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from "styled-components";
 import About from "../Modal-About/Modal-About";
 
@@ -16,10 +16,11 @@ const Navbar = () => {
                 <span />
             </Hamburger>
             <Menu isOpen={isOpen}>
-                <MenuLink href="/"></MenuLink>
-                <MenuLink href=""></MenuLink>
-                <MenuLink href=""></MenuLink>
-                <MenuLink href=""></MenuLink>
+                <MenuLink href="/">Home</MenuLink>
+                <MenuLink href="/New Post">New Post</MenuLink>
+                <MenuLink href="/Conatact">Contact</MenuLink>
+                <About />
+                <MenuLink href="Sign-In">Sign-In</MenuLink>
                 <About />
             </Menu>
         </Nav>
@@ -38,7 +39,7 @@ const Nav = styled.div`
 const Hamburger = styled.div`
     display: none;
     flex-direction: column;
-    curser: pointer;
+    cursor: pointer;
 
     span{
         height: 2px;
