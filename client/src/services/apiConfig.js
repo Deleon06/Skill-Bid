@@ -9,7 +9,7 @@ const getToken = () => {
 const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
-      ? "https://ataskapi.herokuapp.com/"
+      ? null
       : "http://localhost:4567/api"
 })
 

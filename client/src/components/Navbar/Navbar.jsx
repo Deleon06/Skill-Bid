@@ -16,10 +16,12 @@ const Navbar = () => {
                 <span />
             </Hamburger>
             <Menu isOpen={isOpen}>
-                <MenuLink href="/"></MenuLink>
-                <MenuLink href=""></MenuLink>
-                <MenuLink href=""></MenuLink>
-                <MenuLink href=""></MenuLink>
+                <MenuLink href="/">Home</MenuLink>
+                <MenuLink href="/NewJob">New Post</MenuLink>
+                <MenuLink href="/ContactUs">Contact</MenuLink>
+                <About />
+                <MenuLink href="/sign-in">Sign-In</MenuLink>
+                <MenuLink href="/sign-up">Sign-Up</MenuLink>
                 <About />
             </Menu>
         </Nav>
@@ -32,13 +34,13 @@ const Nav = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: grey;
 `;
 
 const Hamburger = styled.div`
     display: none;
     flex-direction: column;
-    curser: pointer;
+    cursor: pointer;
 
     span{
         height: 2px;
