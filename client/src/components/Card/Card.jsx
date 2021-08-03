@@ -5,8 +5,8 @@ import "./Card.css";
 
 export default function Card() {
     return (
-        <div className="card-container">
-            {jobs.map((job) => (
+        <div data-aos="fade-up" className="card-container">
+            {/* {jobs.map((job) => (
                 <div className="job">
                     Job{job.name}
                 </div>
@@ -25,7 +25,7 @@ export default function Card() {
                 <div className="budget">
                     Budget{job.budget}
                 </div>
-            ))}
+            ))} */}
         </div>
     )
 }
