@@ -34,7 +34,7 @@ const Nav = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: grey;
 `;
 
 const Hamburger = styled.div`
