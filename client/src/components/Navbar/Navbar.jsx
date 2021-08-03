@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import About from "../Modal-About/Modal-About;
+import About from "../Modal-About/Modal-About";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
