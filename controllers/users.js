@@ -13,6 +13,7 @@ exp.setDate(today.getDate() + 14);
 export const signUp = async (req, res) => {
   try {
     // res.send(req.body);
+    console.log(req.body)
     const { username, email, password } = req.body;
     const password_digest = await bcrypt.hash(password, parseInt(SALT_ROUNDS));
 
