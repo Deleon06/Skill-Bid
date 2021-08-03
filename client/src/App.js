@@ -5,6 +5,7 @@ import SignUp from "./views/SignUp/SignUp"
 import SignIn from './views/SignIn/SignIn';
 import { verify } from './services/users';
 import NewJob from "./views/NewJob/NewJob"
+import ContactUs from './views/ContactUs/ContactUs';
 
 function App() {
   const [user, setUser] = useState('')
@@ -29,6 +30,9 @@ function App() {
       </Route>
       <Route path="/NewJob">
         <NewJob />
+      </Route>
+      <Route path="/ContactUs">
+        <ContactUs />
       </Route>
     </div>
   );
