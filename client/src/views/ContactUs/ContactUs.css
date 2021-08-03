@@ -1,0 +1,29 @@
+.contactUs {
+	display: flex;
+	justify-content: center;
+	margin-top: 60px;
+}
+
+input,
+textarea,
+button {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	font-family: helvetica;
+}
+textarea {
+	height: 80px;
+	width: 300px;
+}
+button {
+	padding: 9px;
+	border: 1px solid #ccc;
+	background-color: rgb(235, 106, 235);
+	color: white;
+}

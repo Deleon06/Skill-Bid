@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
 import { useHistory } from 'react-router';
+import './ContactUs.css';
+
+
 
 export default function ContactUs() {
   const [input, setInput] = useState({});
@@ -16,15 +19,15 @@ export default function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Your message was sent!')
+    // console.log('Your message was successfully sent!')
     alert("Your message was successfully sent!")
     history.push('/')
 }
 
   return (
       <Layout>
-        <div>
-            <form className="contactUs" onSubmit={handleSubmit}>
+        <div className="contactUs">
+            <form className="contactForm" onSubmit={handleSubmit}>
                 <input 
             type="text"
             id="name"
