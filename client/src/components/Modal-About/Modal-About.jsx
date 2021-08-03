@@ -16,7 +16,7 @@ export default function About() {
 
     return (
         <>
-            <div onClick={toggleAbout} className="about"></div>
+            <div onClick={toggleAbout} className="about">About</div>
 
             {about && (
                 <div className="modal">

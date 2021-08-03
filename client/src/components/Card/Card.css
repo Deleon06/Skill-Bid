@@ -1,5 +1,10 @@
 .card-container{
-
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-flow: row-reverse;
+    width: 600px;
+    height: 300px;
 }
 
 .job {
@@ -15,5 +20,5 @@
 }
 
 .budget {
-    
+
 }
