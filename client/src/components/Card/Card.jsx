@@ -5,8 +5,27 @@ import "./Card.css";
 
 export default function Card() {
     return (
-        <div>
-            
+        <div className="card-container">
+            {jobs.map((job) => (
+                <div >
+                    {job.name}
+                </div>
+            ))}
+            {jobs.map((job) => (
+                <div>
+                    {job.jobtype}
+                </div>
+            ))}
+            {jobs.map((job) => (
+                <div>
+                    {job.desription}
+                </div>
+            ))}
+            {jobs.map((job) => (
+                <div>
+                    {job.budget}
+                </div>
+            ))}
         </div>
     )
 }
