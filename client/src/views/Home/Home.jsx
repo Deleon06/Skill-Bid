@@ -24,7 +24,7 @@ return (
     <Layout user={props.user} setUser={props.setUser}>
         {jobs.map((job) => (
             <div>
-                {task.name}
+                {job.name}
                 {displayEditLink(job)}
             </div>
         ))}
