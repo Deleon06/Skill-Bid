@@ -22,7 +22,6 @@ const Navbar = () => {
                 <About />
                 <MenuLink href="/sign-in">Sign-In</MenuLink>
                 <MenuLink href="/sign-up">Sign-Up</MenuLink>
-                <About />
             </Menu>
         </Nav>
     );
@@ -34,7 +33,7 @@ const Nav = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: grey;
+    background-color: #3feee6;
 `;
 
 const Hamburger = styled.div`
