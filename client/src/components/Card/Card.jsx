@@ -2,7 +2,6 @@ import React, {useState, useEffect}  from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
-import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import {getAllJobs, deleteJob} from "../../services/jobs"
 
