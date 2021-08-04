@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { signUp, signIn } from '../controllers/users.js';
+import { signUp, signIn, verify } from '../controllers/users.js';
 
 
 const router = Router();
@@ -9,7 +9,7 @@ router.post('/sign-up', signUp)
 //sign in: POST
 router.post('/sign-in', signIn)
 //Verify: GET
-router.get('/verify')
+router.get('/verify', verify)
 //Change Password: POST
 // router.post('/change-password')
 

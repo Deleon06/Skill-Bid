@@ -37,15 +37,16 @@ export const createPost = async (req, res) => {
 export const updatePost = async (req, res) => {
   try {
     const { id } = req.params
-    const {body} = req
-    const post = await Post.findByIdAndUpdate(id, body, {new: true})
-    res.send(post)
+    const { body } = req
+    const newPost = await Post.findByIdAndUpdate(id, body, { new: true })
+    newPost.userId = id
+    res.status(201).json( newPost );
   } catch (e) {
-    res.status(424).json({error: e.message})
+    res.status(424).json({ error: e.message })
   }
-}
+};
 
-export const deletePosts = async (req, res) => {
+export const deletePost = async (req, res) => {
   try {
     const { id } = req.params
     const post = await Post.findByIdAndDelete(id)
