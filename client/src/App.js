@@ -23,9 +23,14 @@ function App() {
      <Home user={user} setUser={setUser} />
       </Route>
       {user && (
+        <>
         <Route exact path="/NewJob">
           <NewJob />
-        </Route>
+          </Route>
+          <Route exact path="/ContactUs">
+        <ContactUs />
+      </Route>
+          </>
       )}
       {!user && (
         <>
