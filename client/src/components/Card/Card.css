@@ -1,25 +1,26 @@
-.card-container{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    flex-flow: column;
-    width: 600px;
-    height: 300px;
-    border: 2px solid black
+.card-container {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	flex-flow: column;
+	width: 600px;
+	height: 300px;
+	border: 2px solid black;
 }
 
 .job {
-
 }
 
 .type {
-
 }
 
 .description {
-
 }
 
 .budget {
+}
 
+#dltButton {
+	width: 100px;
+	margin-top: 20px;
 }
