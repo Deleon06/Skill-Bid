@@ -4,7 +4,9 @@ import { useState } from "react"
 import { useHistory } from "react-router"
 
 export default function Detail() {
+
   const [input, setInput] = useState("");
+
 
   const history = useHistory();
 
@@ -15,6 +17,7 @@ export default function Detail() {
     history.push("/")
   }
   
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setInput((prevInput) => ({
@@ -22,6 +25,7 @@ export default function Detail() {
       [id]: value,
     }))
   }
+
 
   return (
     <Layout>
@@ -35,6 +39,8 @@ export default function Detail() {
             <h2>{job.budget}</h2>
             </div>
             ))}
+
+      </div>
         </div>
         
       <div id="form">
@@ -43,6 +49,7 @@ export default function Detail() {
             <label>Name</label>
             <input
               type="text"
+
               id="name"
               placeholder="Name"
               value={input.name}
@@ -52,6 +59,7 @@ export default function Detail() {
             <label>Email</label>
             <input
               type="text"
+
               id="email"
               value={input.email}
               onChange={handleChange}
@@ -61,6 +69,7 @@ export default function Detail() {
             <label>Description</label>
             <input
               type="text"
+
               id="description"
               value={input.description}
             onChange={handleChange}

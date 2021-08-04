@@ -7,9 +7,9 @@ const Navbar = () => {
 
     return (
         <Nav>
-            <logo href="">
+            <Logo href="/">
                 Skill<span>Bid</span>
-            </logo>
+            </Logo>
             <Hamburger onClick={() => setIsOpen(!isOpen)}>
                 <span />
                 <span />

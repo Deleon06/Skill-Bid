@@ -4,9 +4,9 @@
 	margin-top: 60px;
 }
 
-input,
-textarea,
-button {
+#cName,
+#cMessage,
+#contactButton {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
@@ -17,11 +17,12 @@ button {
 	resize: vertical;
 	font-family: helvetica;
 }
-textarea {
+
+#cMessage {
 	height: 80px;
 	width: 300px;
 }
-button {
+#contactButton {
 	padding: 9px;
 	border: 1px solid #ccc;
 	background-color: rgb(235, 106, 235);

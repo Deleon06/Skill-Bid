@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { signIn } from '../../services/users'
 import Layout from "../../components/Layout/Layout"
 import { useHistory } from 'react-router-dom'
+import "./SignIn.css";
 
 export default function SignIn(props) {
     const [input, setInput] = useState({ email: "", password: ""})
