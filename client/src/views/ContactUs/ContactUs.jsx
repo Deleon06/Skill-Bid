@@ -30,14 +30,14 @@ export default function ContactUs() {
             <form className="contactForm" onSubmit={handleSubmit}>
                 <input 
             type="text"
-            id="name"
+            id="cName"
             placeholder="Name"
             value={input.name}
             onChange={handleChange}
           /><br />
           <textarea 
             type="text"
-            id="message"
+            id="cMessage"
             placeholder="Message"
             value={input.message}
             onChange={handleChange}

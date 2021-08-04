@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Layout from "../../components/Layout/Layout"
 import {createJob} from "../../services/jobs"
-import {useHistory} from 'react-router'
+import { useHistory } from 'react-router'
 
 export default function NewJobs(props) {
     const[input, setInput] = useState({projectType: "Bathroom"})
