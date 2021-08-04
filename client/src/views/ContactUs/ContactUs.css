@@ -4,8 +4,8 @@
 	margin-top: 60px;
 }
 
-#name,
-#message,
+#cName,
+#cMessage,
 #contactButton {
 	width: 100%;
 	padding: 12px;
@@ -17,7 +17,8 @@
 	resize: vertical;
 	font-family: helvetica;
 }
-#message {
+
+#cMessage {
 	height: 80px;
 	width: 300px;
 }

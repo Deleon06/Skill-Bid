@@ -1,6 +1,7 @@
 import Layout from "../../components/Layout/Layout"
 import Card from "../../components/Card/Card"
 
+
 export default function Home(props) {
     
 
