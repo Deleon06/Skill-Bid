@@ -4,17 +4,16 @@ import Layout from "../../components/Layout/Layout"
 import { useHistory } from 'react-router-dom'
 import './SignOn.css'
 
-export default function SignIn(props) {
-    const [signIn, setSignIn] = useState(false)
+export default function SignIn() {
+    const [logIn, setLogIn] = useState(false)
     const [input, setInput] = useState({ email: "", password: ""})
-    const {setUser} = props
     const history = useHistory();
 
     const toggleSignIn = () => {
-        setSignIn(!signIn);
+        setLogIn(!logIn);
     };
 
-    if(signIn){
+    if(logIn){
         document.body.classList.add("active-signin")
     } else {
         document.body.classList.remove("active-signin")
@@ -24,7 +23,6 @@ export default function SignIn(props) {
         e.preventDefault()
         const user = await signIn(input)
         console.log(user)
-        setUser(user)
         history.push('/')
     }
 
@@ -39,7 +37,7 @@ export default function SignIn(props) {
     return (
         <>
         <div onClick={toggleSignIn} className="sign-in">Sign-In</div>
-        {signIn && (
+        {logIn && (
             <div className="modal-sign">
                 <div onClick={toggleSignIn} className="overlay-signin"></div>
                 <div className="signin-content">

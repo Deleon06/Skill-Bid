@@ -1,0 +1,93 @@
+import { useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import { getJob, updateJob } from "../../services/jobs";
+
+export default function UpdateJob(props) {
+  const history = useHistory();
+  const { id } = useParams();
+  const [job, setJob] = useState({});
+
+
+  const data = {
+    name: "",
+    projectType: "",
+    description: "",
+    budget: "",
+  }
+
+  useEffect(() => {
+    const fetchJob = async () => {
+      const job = await getJob(id);
+      setJob(job)
+      setEditedJob(job)
+    }
+    fetchJob()
+  }, [id])
+
+  const [editedJob, setEditedJob] = useState(data);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEditedJob((post) => ({
+      ...job,
+      [name]: value,
+    }))
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(editedJob)
+    await updateJob(id, editedJob)
+    history.push("/")
+  }
+
+  return (
+    <div>
+      EDIT<br />
+      <form onSubmit={handleSubmit}>
+      <label>Name</label><br />
+        <input
+            type="text"
+            name="name"
+            value={editedJob.name}
+            onChange={handleChange} />
+        <br />
+        <label>Project Type</label><br />
+        <select name="projectType" onChange={handleChange}
+          value={editedJob.projectType}>
+                    <option value="Bathroom">Bathroom</option>
+                    <option value="Ceiling">Ceiling</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Floor">Floor</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Landscape">Landscape</option>
+                    <option value="Paint">Paint</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Roof">Roof</option>
+                    <option value="Wall">Wall</option>
+                </select>
+        {/* <input
+            type="text"
+            name="projectType"
+            value={editedJob.projectType}
+            onChange={handleChange} /> */}
+        <br />
+        <label>Description</label><br />
+        <input
+            type="text"
+            name="description"
+            value={editedJob.description}
+            onChange={handleChange} />
+        <br />
+        <label>Budget</label><br />
+        <input name="budget" placeholder="$"
+                             type="number"
+                             id="budget"
+                             value={editedJob.budget}
+                             onChange={handleChange}
+                        />
+                <br />
+        <button type="submit">Edit Post</button><br />
+</form>
+    </div>
+  )
+}

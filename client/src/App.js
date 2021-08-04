@@ -6,6 +6,7 @@ import SignIn from './views/SignIn/SignIn';
 import { verify } from './services/users';
 import NewJob from "./views/NewJob/NewJob"
 import ContactUs from './views/ContactUs/ContactUs';
+import UpdateJob from './views/UpdateJob/UpdateJob';
 import Details from "./views/Details/Details"
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route exact path="/ContactUs">
         <ContactUs />
+          </Route>
+          <Route exact path='/posts/edit/:id'>
+        <UpdateJob />
       </Route>
           </>
       )}

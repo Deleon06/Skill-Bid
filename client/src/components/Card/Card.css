@@ -20,7 +20,13 @@
 .budget {
 }
 
-#dltButton {
+
+#editButton {
 	width: 100px;
 	margin-top: 20px;
+}
+#dltButton {
+	width: 100px;
+	margin-top: 5px;
+
 }
