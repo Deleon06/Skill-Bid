@@ -24,6 +24,7 @@ export default function Card() {
     //     }
     // }
     return (
+        
         <>
         {jobs.map((job) => (
             <div data-aos="fade-up" className="card-container" key={job._id}>

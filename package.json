@@ -6,6 +6,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.5",
     "morgan": "^1.10.0",
+    "react-login-modal": "^1.2.1",
     "react-recaptcha": "^2.3.10"
   },
   "scripts": {
