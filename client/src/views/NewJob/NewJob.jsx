@@ -2,6 +2,7 @@ import {useState} from 'react'
 import Layout from "../../components/Layout/Layout"
 import {createJob} from "../../services/jobs"
 import { useHistory } from 'react-router'
+import NewJob from "./NewJob.css"
 
 export default function NewJobs(props) {
     const[input, setInput] = useState({projectType: "Bathroom"})
@@ -25,15 +26,17 @@ const handleSubmit = async (e) => {
 return (
     <div>
         <Layout user={props.user} setUser={props.setUser}>
+            <>
+                <h1>New<span>Job</span></h1>
+                <br />
             <div className="jobpost-container">
-                New Job
                 <form onSubmit={handleSubmit}>
                     <br />
                     <label>Name</label>
                     <br />
                     <br />
-                    <input 
-                        placeholder="name"
+                    <input className="input"
+                        placeholder="Name"
                         type="text"
                         id="name"
                         value={input.name}
@@ -42,6 +45,7 @@ return (
                     <br />
                     <br />
                     <label>Project
+                    <br />
                     <br />
                     <select className="dropdown" id="projectType" onChange={handleChange}>
                         <option value="Bathroom">Bathroom</option>
@@ -58,8 +62,8 @@ return (
                     </label>
                     <br />
                     <br />
-                    <textarea
-                        placeholder="description of job"
+                    <textarea className="input"
+                        placeholder="Job description"
                         type="text"
                         id="description"
                         value={input.description}
@@ -69,7 +73,8 @@ return (
                     <br />
                     <label>Budget</label>
                     <br />
-                    <input 
+                    <br />
+                    <input className="input"
                         placeholder="$"
                         type="number"
                         id="budget"
@@ -78,9 +83,10 @@ return (
                     />
                     <br />
                     <br />
-                    <button>Submit</button>
+                    <button className="btn">Submit</button>
                 </form>
             </div>
+            </>
         </Layout>
     </div>
 )
