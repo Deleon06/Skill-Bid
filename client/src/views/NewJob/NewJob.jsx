@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Layout from "../../components/Layout/Layout"
 import {createJob} from "../../services/jobs"
 import { useHistory } from 'react-router'
-import NewJob from "./NewJob.css"
+import "./NewJob.css"
 
 export default function NewJobs(props) {
     const[input, setInput] = useState({projectType: "Bathroom"})
@@ -23,14 +23,15 @@ export default function NewJobs(props) {
         await createJob(input)
         history.push('/')
     }
-    
+
     return (
         <div>
             <Layout user={props.user} setUser={props.setUser}>
                 <>
                     <h1>New<span>Job</span></h1>
                     <br />
-                 <div className="jobpost-container">
+                <div className="jobpost-container">
+
                     <form onSubmit={handleSubmit}>
                         <br />
                         <label>Name</label>
@@ -91,4 +92,5 @@ export default function NewJobs(props) {
             </Layout>
         </div>
     )
- }
+
+    }
