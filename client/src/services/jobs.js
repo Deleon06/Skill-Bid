@@ -9,6 +9,15 @@ export const getAllJobs = async () => {
     }
 } 
 
+export const getJob = async () => {
+  try {
+      const res = await api.get('/posts/:id')
+      return res.data
+  } catch(e) {
+      throw e;
+  }
+}
+
 export const createJob = async (input) =>{
     try{
         const res = await api.post("/posts", input)

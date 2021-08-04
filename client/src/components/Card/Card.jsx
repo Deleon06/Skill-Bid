@@ -3,7 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
 import {getAllJobs} from "../../services/jobs"
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 AOS.init();
 
@@ -26,7 +27,8 @@ export default function Card() {
     return (
         <>
         {jobs.map((job) => (
-            <div data-aos="fade-up" className="card-container" key={job._id}>
+          <Link to={`/post/${job._id}`} key={job._id}>             
+          <div data-aos="fade-up" className="card-container" key={job._id}>
                 <div className="job">
                     Name of person: {job.name}
                 </div>
@@ -43,6 +45,7 @@ export default function Card() {
                     Budget: {job.budget}
                 </div>
             </div>
+          </Link>
         ))}
         </>
     )

@@ -6,6 +6,7 @@ import SignIn from './views/SignIn/SignIn';
 import { verify } from './services/users';
 import NewJob from "./views/NewJob/NewJob"
 import ContactUs from './views/ContactUs/ContactUs';
+import Details from "./views/Details/Details"
 
 function App() {
   const [user, setUser] = useState('')
@@ -21,6 +22,9 @@ function App() {
     <div className="App">
       <Route exact path = "/">
         <Home />
+      </Route>
+      <Route exact path="/post/:id">
+        <Details />
       </Route>
       <Route exact path="/NewJob">
         <NewJob />
