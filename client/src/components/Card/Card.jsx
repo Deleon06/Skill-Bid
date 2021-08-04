@@ -2,7 +2,8 @@ import React, {useState, useEffect}  from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
-import {getAllJobs, deleteJob} from "../../services/jobs"
+import { getAllJobs, deleteJob } from "../../services/jobs"
+import { Link } from 'react-router-dom';
 
 AOS.init();
 
@@ -48,8 +49,10 @@ export default function Card() {
                 <div className="budget">
                     Budget: {job.budget}
             </div>
+            <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>  
             <button value={job._id} onClick={handleDelete} id='dltButton'>DELETE</button>
-            </div>
+           
+          </div>
         ))}
         </>
     )
