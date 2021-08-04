@@ -17,12 +17,12 @@ export default function NewJobs(props) {
         }))
     }
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         await createJob(input)
         history.push('/')
     }
-
 
     return (
         <div>
@@ -31,6 +31,7 @@ export default function NewJobs(props) {
                     <h1>New<span>Job</span></h1>
                     <br />
                 <div className="jobpost-container">
+
                     <form onSubmit={handleSubmit}>
                         <br />
                         <label>Name</label>
@@ -92,4 +93,4 @@ export default function NewJobs(props) {
         </div>
     )
 
-}
+    }
