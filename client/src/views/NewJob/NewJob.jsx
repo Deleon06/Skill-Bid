@@ -4,7 +4,7 @@ import {createJob} from "../../services/jobs"
 import {useHistory} from 'react-router'
 
 export default function NewJobs(props) {
-    const[input, setInput] = useState({})
+    const[input, setInput] = useState({projectType: "Bathroom"})
     const history = useHistory()
 
 
@@ -41,10 +41,9 @@ return (
                     />
                     <br />
                     <br />
-                    <label>Project</label>
+                    <label>Project
                     <br />
-                    <br />
-                    <select className="dropdown"> 
+                    <select className="dropdown" id="projectType" onChange={handleChange}>
                         <option value="Bathroom">Bathroom</option>
                         <option value="Ceiling">Ceiling</option>
                         <option value="Electrical">Electrical</option>
@@ -56,6 +55,7 @@ return (
                         <option value="Roof">Roof</option>
                         <option value="Wall">Wall</option>
                     </select>
+                    </label>
                     <br />
                     <br />
                     <textarea

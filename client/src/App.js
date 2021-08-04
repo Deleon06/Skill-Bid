@@ -19,19 +19,19 @@ function App() {
 
   return (
     <div className="App">
-      <Route exact path="/">
-        <Home user={user} setUser={setUser}/>
+      <Route exact path = "/">
+        <Home />
       </Route>
-      <Route path="/sign-in">
-        <SignIn setUser={setUser} user={user} />
-      </Route>
-      <Route path="/sign-up">
-        <SignUp setUser={setUser} user={user} />
-      </Route>
-      <Route path="/NewJob">
+      <Route exact path="/NewJob">
         <NewJob />
       </Route>
-      <Route path="/ContactUs">
+      <Route exact path="/sign-in">
+        <SignIn setUser={setUser} user={user} />
+      </Route>
+      <Route exact path="/sign-up">
+        <SignUp setUser={setUser} user={user} />
+      </Route>
+      <Route exact path="/ContactUs">
         <ContactUs />
       </Route>
     </div>
