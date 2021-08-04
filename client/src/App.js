@@ -9,35 +9,46 @@ import ContactUs from './views/ContactUs/ContactUs';
 import Details from "./views/Details/Details"
 
 function App() {
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     const verifyUser = async () => {
       setUser(await verify())
-    }
+    };
     verifyUser()
   }, [])
 
   return (
     <div className="App">
       <Route exact path = "/">
-        <Home />
+     <Home user={user} setUser={setUser} />
       </Route>
       <Route exact path="/post/:id">
-        <Details />
+        <Details/>
       </Route>
-      <Route exact path="/NewJob">
-        <NewJob />
+      {user && (
+        <>
+        <Route exact path="/NewJob">
+          <NewJob />
+          </Route>
+          <Route exact path="/ContactUs">
+        <ContactUs />
       </Route>
+          </>
+      )}
+      {!user && (
+        <>
       <Route exact path="/sign-in">
         <SignIn setUser={setUser} user={user} />
       </Route>
       <Route exact path="/sign-up">
         <SignUp setUser={setUser} user={user} />
-      </Route>
-      <Route exact path="/ContactUs">
+          </Route>
+          <Route exact path="/ContactUs">
         <ContactUs />
       </Route>
+        </>
+      )}
     </div>
   );
 }

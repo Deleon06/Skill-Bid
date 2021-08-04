@@ -1,15 +1,16 @@
-import React from 'react'
+import React, {useState, useEffect}  from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
-import {getAllJobs} from "../../services/jobs"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import {getAllJobs, deleteJob} from "../../services/jobs"
 
 AOS.init();
 
 export default function Card() {
-    const[jobs, setJobs] = useState([])
+  const [jobs, setJobs] = useState([])
+  const [toggle, setToggle] = useState(false)
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -17,7 +18,12 @@ export default function Card() {
             setJobs(data)
         }
         fetchTasks()
-    }, [])
+    }, [toggle])
+  
+  async function handleDelete(e) {
+    await deleteJob(e.target.value)
+    setToggle(prevState => !prevState)
+  }
 
     // const displayEditLink = (job) => {
     //     if (job.userId === props.user?.id) {
@@ -25,6 +31,7 @@ export default function Card() {
     //     }
     // }
     return (
+        
         <>
         {jobs.map((job) => (
           <Link to={`/post/${job._id}`} key={job._id}>             
@@ -34,7 +41,7 @@ export default function Card() {
                 </div>
                 <br />
                 <div className="type">
-                    Type ofJob: {job.projectType}
+                    Type of Job: {job.projectType}
                 </div> 
                 <br />
                 <div className="description">
@@ -43,7 +50,8 @@ export default function Card() {
                 <br />
                 <div className="budget">
                     Budget: {job.budget}
-                </div>
+            </div>
+            <button value={job._id} onClick={handleDelete} id='dltButton'>DELETE</button>
             </div>
           </Link>
         ))}
