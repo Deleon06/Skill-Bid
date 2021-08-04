@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState, useEffect}  from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
+<<<<<<< HEAD
 import {getAllJobs, getBathroom, getElectrical, getFloor, getKitchen, getLandscape, getPlumbing, getRoof, getWall, getCeiling, getPaint} from "../../services/jobs"
 import {useState, useEffect} from "react"
 
@@ -9,12 +10,22 @@ AOS.init();
 
 export default function Card(props) {
     const[jobs, setJobs] = useState([])
+=======
+import {getAllJobs, deleteJob} from "../../services/jobs"
+
+AOS.init();
+
+export default function Card() {
+  const [jobs, setJobs] = useState([])
+  const [toggle, setToggle] = useState(false)
+>>>>>>> 3fe700a7e1b53b4216f8c40449ee411e7a489f1a
 
     useEffect(() => {
         const fetchTasks = async () => {
             let data = await getAllJobs()
             setJobs(data)
         }
+<<<<<<< HEAD
         fetchTasks();
     
     
@@ -99,6 +110,15 @@ export default function Card(props) {
         }
 
     },[])
+=======
+        fetchTasks()
+    }, [toggle])
+  
+  async function handleDelete(e) {
+    await deleteJob(e.target.value)
+    setToggle(prevState => !prevState)
+  }
+>>>>>>> 3fe700a7e1b53b4216f8c40449ee411e7a489f1a
 
     return (
         
@@ -119,7 +139,8 @@ export default function Card(props) {
                 <br />
                 <div className="budget">
                     Budget: {job.budget}
-                </div>
+            </div>
+            <button value={job._id} onClick={handleDelete} id='dltButton'>DELETE</button>
             </div>
         ))}
         </>
