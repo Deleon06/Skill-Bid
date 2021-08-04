@@ -24,6 +24,7 @@ const Navbar = (props) => {
         {props.user ? (
           <>
             <div>{props.user?.username}</div>
+            <MenuLink href="/">Home</MenuLink>
             <MenuLink href="/NewJob">New Post</MenuLink>
             <MenuLink href="/ContactUs">Contact</MenuLink>
             <About />
