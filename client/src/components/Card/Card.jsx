@@ -7,7 +7,7 @@ import {useState, useEffect} from "react"
 
 AOS.init();
 
-export default function Card() {
+export default function Card(props) {
     const[jobs, setJobs] = useState([])
 
     useEffect(() => {
@@ -15,8 +15,12 @@ export default function Card() {
             let data = await getAllJobs()
             setJobs(data)
         }
-        fetchTasks()
-    }, [])
+    })
+    //     const fetchFilteredTasks = async () {
+    //         let data = await `getAll${props}`
+    //     }
+    //     fetchTasks()
+    // }, [])
 
     // const displayEditLink = (job) => {
     //     if (job.userId === props.user?.id) {
