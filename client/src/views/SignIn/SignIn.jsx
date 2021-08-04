@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { signIn } from '../../services/users'
 import Layout from "../../components/Layout/Layout"
 import { useHistory } from 'react-router-dom'
+import './SignOn.css'
 
 export default function SignIn(props) {
     const [signIn, setSignIn] = useState(false)
@@ -37,7 +38,7 @@ export default function SignIn(props) {
 
     return (
         <>
-        <div onClick={toggleSignIn} className="sign-in">Sign iN</div>
+        <div onClick={toggleSignIn} className="sign-in">Sign-In</div>
         {signIn && (
             <div className="modal-sign">
                 <div onClick={toggleSignIn} className="overlay-signin"></div>

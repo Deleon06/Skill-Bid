@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import styled from "styled-components";
-import About from "../Modal-About/Modal-About";
+import styled from 'styled-components';
+import About from '../Modal-About/Modal-About';
 import { signOut } from '../../services/users';
+import SignIn from '../../views/SignIn/SignIn';
 
 const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,14 +30,15 @@ const Navbar = (props) => {
             <MenuLink href="/ContactUs">Contact</MenuLink>
             <About />
             <button onClick={handleSignOut}>Sign Out</button>
-          </>
+         </>
         ) : (
           <Menu isOpen={isOpen}>
             <MenuLink href="/">Home</MenuLink>
           
             <MenuLink href="/ContactUs">Contact</MenuLink>
             <About />
-            <MenuLink href="/sign-in">Sign-In</MenuLink>
+            <SignIn />
+            {/* <MenuLink href="/sign-in">Sign-In</MenuLink> */}
             <MenuLink href="/sign-up">Sign-Up</MenuLink>
           </Menu>
         )}
