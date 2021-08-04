@@ -32,7 +32,7 @@ export default function Card() {
                 </div>
                 <br />
                 <div className="type">
-                    Type ofJob: {job.projectType}
+                    Type of Job: {job.projectType}
                 </div> 
                 <br />
                 <div className="description">
