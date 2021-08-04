@@ -4,9 +4,9 @@ import { useState } from "react"
 import { useHistory } from "react-router"
 
 export default function Detail() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [description, setDescription] = useState("")
+
+  const [input, setInput] = useState("");
+
 
   const history = useHistory();
 
@@ -17,6 +17,16 @@ export default function Detail() {
     history.push("/")
   }
   
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setInput((prevInput) => ({
+      ...prevInput,
+      [id]: value,
+    }))
+  }
+
+
   return (
     <Layout>
         <div id="container">
@@ -29,31 +39,40 @@ export default function Detail() {
             <h2>{job.budget}</h2>
             </div>
             ))}
+
       </div>
+        </div>
+        
       <div id="form">
         <label>Contact Seller</label>
           <form onSubmit={handleSubmit}>
             <label>Name</label>
             <input
               type="text"
+
+              id="name"
               placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={input.name}
+              onChange={handleChange}
             />
             <br />
             <label>Email</label>
             <input
               type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+
+              id="email"
+              value={input.email}
+              onChange={handleChange}
             />
             <br />
 
             <label>Description</label>
             <input
               type="text"
-              value={description}
-            onChange={(e) => setDescription(e.target.value)}
+
+              id="description"
+              value={input.description}
+            onChange={handleChange}
             />
               <br />
             <button>Send</button>
