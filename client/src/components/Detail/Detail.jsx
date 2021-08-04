@@ -1,14 +1,25 @@
 import React from 'react'
-import Layout from "../../components/Layout/Layout"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useHistory } from "react-router"
+import {getJob} from "../../services/jobs"
 
-export default function Detail() {
+
+export default function Detail(props) {
 
   const [input, setInput] = useState("");
+  const [job, setJob] = useState([])
 
 
   const history = useHistory();
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      let data = await getJob()
+      console.log(data)
+        setJob(data)
+    }
+    fetchTasks()
+}, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,20 +39,18 @@ export default function Detail() {
 
 
   return (
-    <Layout>
         <div id="container">
-        <div className="detail-container">
-        {jobs.map((job) => (
+      <div className="detail-container">
+        
             <div>
             <h1>{job.name}</h1>
             <h2>{job.jobtype}</h2>
             <p>{job.description}</p>
             <h2>{job.budget}</h2>
             </div>
-            ))}
+            
 
       </div>
-        </div>
         
       <div id="form">
         <label>Contact Seller</label>
@@ -79,6 +88,5 @@ export default function Detail() {
         </form>
       </div>
       </div>
-      </Layout>
     )
 }

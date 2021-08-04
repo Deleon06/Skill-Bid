@@ -7,6 +7,7 @@ import { verify } from './services/users';
 import NewJob from "./views/NewJob/NewJob"
 import ContactUs from './views/ContactUs/ContactUs';
 import UpdateJob from './views/UpdateJob/UpdateJob';
+import Details from "./views/Details/Details"
 
 function App() {
   const [user, setUser] = useState(null)
@@ -22,6 +23,9 @@ function App() {
     <div className="App">
       <Route exact path = "/">
      <Home user={user} setUser={setUser} />
+      </Route>
+      <Route exact path="/post/:id">
+        <Details/>
       </Route>
       {user && (
         <>
