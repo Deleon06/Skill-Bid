@@ -42,7 +42,7 @@ export default function ContactUs() {
             value={input.message}
             onChange={handleChange}
           /><br />
-          <button>Contact Us</button>
+          <button id="contactButton">Contact Us</button>
             </form>
       </div>
       </Layout>
