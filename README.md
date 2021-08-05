@@ -54,6 +54,7 @@ export default mongoose.model("Job", JobSchema)
 - Modal for form of contact
 - A form of contact
 - Making a more reactive UI
+- Authorized users can bid on a listing and then the original poster can decide on the winner.
 
 ## Project Schedule
 |  Day | Deliverable | Status
