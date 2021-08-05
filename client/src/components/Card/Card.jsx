@@ -2,90 +2,37 @@ import React, {useState, useEffect}  from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
-<<<<<<< HEAD
-import { Link } from "react-router-dom"
-import {getAllJobs, deleteJob} from "../../services/jobs"
-=======
-import {getAllJobs, deleteJob, getBathroom, getElectrical, getFloor, getKitchen, getLandscape, getPlumbing, getRoof, getWall, getCeiling, getPaint} from "../../services/jobs"
->>>>>>> ec2d9a6 (adding filter)
+import {getAllJobs, deleteJob, getCategory} from "../../services/jobs"
+import {Link} from 'react-router-dom'
 
 AOS.init();
 
 export default function Card(props) {
-<<<<<<< HEAD
-  const [jobs, setJobs] = useState([])
-  const [toggle, setToggle] = useState(false)
-
-    useEffect(() => {
-        const fetchTasks = async () => {
-            let data = await getAllJobs()
-            setJobs(data)
-        }
-        fetchTasks()
-    }, [toggle])
-  
-  async function handleDelete(e) {
-    await deleteJob(e.target.value)
-    setToggle(prevState => !prevState)
-  }
-
-=======
     const [jobs, setJobs] = useState([])
     const [toggle, setToggle] = useState(false)
-    
+
     useEffect(() => {
         const fetchTasks = async () => {
-            console.log(props)
-            if (props.value === undefined){
+            console.log(props.value)
+            if (props.value === undefined || props.value.projectType === "All"){
                 let data = await getAllJobs()
                 setJobs(data)
-            }else if(props.value.projectType === "Bathroom") {
-                let data = await getBathroom()
+            }
+            else  {
+                let data = await getCategory(props.value.projectType)
                 setJobs(data)
-            }else if(props.value.projectType === "Ceiling"){
-                let data = await getCeiling()
-                setJobs(data)
-            }else if(props.value.projectType === "Electrical") {
-                let data = await getElectrical()
-                setJobs(data)
-            }else if(props.value.projectType === "Floor"){
-                let data = await getFloor()
-                setJobs(data)
-            }else if(props.value.projectType === "Kitchen"){
-                let data = await getKitchen()
-                setJobs(data)
-            }else if(props.value.projectType === "Landscape"){
-                let data = await getLandscape()
-                setJobs(data)
-            }else if(props.value.projectType === "Paint") {
-                let data = await getPaint()
-                setJobs(data)
-            }else if(props.value.projectType === "Plumbing"){
-                let data = await getPlumbing()
-                setJobs(data)
-            }else if(props.value.projectType === "Roof"){
-                let data = await getRoof()
-                setJobs(data)
-            }else if(props.value.projectType === "Wall"){
-                let data = await getWall()
-                setJobs(data)
-            }else if(props.value.projectType === undefined){
-                let data = await getAllJobs()
-                setJobs(data)
-            }else{
-                let data = await getAllJobs()
-                setJobs(data)
+            }
         }
-    }
-             fetchTasks();    
+
+        fetchTasks();   
+    },[props]) 
     
-        },)
+ 
 
         async function handleDelete(e) {
             await deleteJob(e.target.value)
             setToggle(prevState => !prevState)
         }
->>>>>>> ec2d9a6 (adding filter)
 
     return (
         

@@ -6,7 +6,6 @@ import "./Home.css"
 export default function Home(props) {
     const [value, setValue] = useState()
     
-    
     const handleChange = (e) => {
         const {id, value} = e.target;
 
