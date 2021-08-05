@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { getJob, updateJob } from "../../services/jobs";
+import Layout from "../../components/Layout/Layout";
+import './UpdateJob.css';
 
 export default function UpdateJob(props) {
   const history = useHistory();
@@ -41,8 +43,10 @@ export default function UpdateJob(props) {
   }
 
   return (
+    <Layout user={props.user} setUser={props.setUser}>
     <div>
-      EDIT<br />
+        <h2 id='editTitle'>Edit your job</h2><br />
+        <div className="jobedit-container">
       <form onSubmit={handleSubmit}>
       <label>Name</label><br />
         <input
@@ -86,8 +90,10 @@ export default function UpdateJob(props) {
                              onChange={handleChange}
                         />
                 <br />
-        <button type="submit">Edit Post</button><br />
-</form>
-    </div>
+        <button id="editBtn" type="submit">Edit Post</button><br />
+          </form>
+          </div>
+      </div>
+      </Layout>
   )
 }

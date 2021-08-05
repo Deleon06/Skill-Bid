@@ -36,7 +36,7 @@ function App() {
         <ContactUs user={user} setUser={setUser}/>
           </Route>
           <Route exact path='/posts/edit/:id'>
-        <UpdateJob />
+        <UpdateJob user={user} setUser={setUser}/>
       </Route>
           </>
       )}
