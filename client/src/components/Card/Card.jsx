@@ -47,9 +47,8 @@ export default function Card(props) {
             <br />
             <div className="budget">
               Budget: {job.budget}
-            </div>
-            <br />
-            </Link>
+              </div>
+              </Link>
             <div className="bid">
               <Bid />
             </div>
