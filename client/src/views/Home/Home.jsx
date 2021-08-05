@@ -6,14 +6,16 @@ import "./Home.css"
 export default function Home(props) {
     const [value, setValue] = useState()
     
+    
     const handleChange = (e) => {
         const {id, value} = e.target;
-        
-        setValue((prevValue) => ({
-            ...prevValue,
+
+        setValue((prevInput) => ({
+            ...prevInput,
             [id]: value,
         }))
-    }
+        }
+    
 
 return (
     <Layout user={props.user} setUser={props.setUser}>
@@ -21,7 +23,8 @@ return (
         <div className="filter-container">
             <form>
                 <label>Filter By</label>
-                <select onChange={handleChange}>
+                <select id="projectType" onChange={handleChange}>
+                    <option value="All">All</option>
                     <option value="Bathroom">Bathroom</option>
                     <option value="Ceiling">Ceiling</option>
                     <option value="Electrical">Electrical</option>
