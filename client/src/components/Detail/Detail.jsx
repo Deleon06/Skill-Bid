@@ -44,7 +44,7 @@ export default function Detail(props) {
       <div className="detail-container">
             <div>
             <h1>{job.name}</h1>
-            <h2>{job.jobtype}</h2>
+            <h2>{job.projectType}</h2>
             <p>{job.description}</p>
             <h2>{job.budget}</h2>
             </div>
