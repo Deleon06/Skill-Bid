@@ -31,7 +31,7 @@ export default function Card(props) {
       <>
         {jobs.map((job) => (
 
-          <div data-aos="fade-up" className="card-container" id={job.projectType} key={job._id}>
+          <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
               Name of person: {job.name}
@@ -48,13 +48,13 @@ export default function Card(props) {
             <div className="budget">
               Budget: {job.budget}
             </div>
+            <br />
+            </Link>
             <div className="bid">
               <Bid />
             </div>
-            </Link>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
             <button value={job._id} onClick={handleDelete} id='dltButton'>DELETE</button>
-           
           </div>
         ))}
       </>

@@ -1,44 +1,38 @@
 .card-container {
-<<<<<<< HEAD
 	display: flex;
 	justify-content: center;
-	margin: 0 auto;
+	margin: 20px auto;
 	flex-flow: column;
-	width: 600px;
+	width: 650px;
 	height: 300px;
 	border: 1px solid lightcyan;
-	background-image: linear-gradient(to right, #ffafbd, #ffc3a0);
+	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
 	border-radius: 5px;
 	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
-=======
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  flex-flow: column;
-  width: 600px;
-  height: 300px;
-  border: 2px solid black;
->>>>>>> d8255deada1e655889698ebc37b9146b7287e1e5
+	color: black;
+  	text-decoration: none;
 }
 
-.card-container:hover {
-  opacity: 30%;
+.card-container :hover {
+	opacity: 50%;
+}
+a:link {
+	color: black;
+}
+a:visited {
+	color: black;
+}
+a:hover{
+	color:inherit;
+	background: inherit;
 }
 
-.job:hover,
-.type:hover,
-.description:hover,
-.budget:hover {
-  opacity: 40%;
-}
-
-.job,
-.type,
-.description,
-.budget,
-.bid {
-  color: black;
-  text-decoration: none;
+.disabled {
+        pointer-events: none;
+        opacity: 0.3;
+      }
+*{
+	text-decoration: none;
 }
 
 .type {
@@ -51,29 +45,21 @@
 }
 
 #editButton {
-<<<<<<< HEAD
 	width: 100px;
 	margin-top: 20px;
 	margin: 5px;
 	border-radius: 5px;
 	border: 0px;
 	background-color: lightcyan;
-=======
-  width: 100px;
-  margin-top: 20px;
->>>>>>> d8255deada1e655889698ebc37b9146b7287e1e5
+	display: flex;
+	justify-content: center;
 }
 
 #dltButton {
-<<<<<<< HEAD
 	width: 100px;
 	margin-top: 5px;
 	margin: 5px;
 	border-radius: 5px;
 	border: 0px;
 	background-color: lightcyan;
-=======
-  width: 100px;
-  margin-top: 5px;
->>>>>>> d8255deada1e655889698ebc37b9146b7287e1e5
 }
