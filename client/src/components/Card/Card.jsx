@@ -25,6 +25,13 @@ export default function Card(props) {
     setToggle(prevState => !prevState)
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (window.confirm("Are you sure you want to delete the job post?")) {
+      handleDelete(e)
+    }
+  }
+
 
     return (
         
@@ -53,7 +60,7 @@ export default function Card(props) {
               <Bid />
             </div>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
-            <button value={job._id} onClick={handleDelete} id='dltButton'>DELETE</button>
+            <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
            
           </div>
         ))}
