@@ -38,7 +38,7 @@ export default function Card(props) {
       <>
         {jobs.map((job) => (
 
-          <div data-aos="fade-up" className="card-container" id={job.projectType} key={job._id}>
+          <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
               Name of person: {job.name}
