@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from "react"
 import { useHistory, useParams } from "react-router-dom"
-import {getJob} from "../../services/jobs"
+
+import { getJob } from "../../services/jobs"
+
 
 
 export default function Detail(props) {
@@ -9,14 +11,18 @@ export default function Detail(props) {
   const [input, setInput] = useState("");
   const [job, setJob] = useState([])
 
-  const { id } = useParams();
+
+  const { id } = useParams()
+
+
   const history = useHistory();
 
   useEffect(() => {
     const fetchTasks = async () => {
-      let data = await getJob(id)
-      console.log(data)
-        setJob(data)
+      let job = await getJob(id)
+      console.log(job)
+        setJob(job)
+
     }
     fetchTasks()
 }, [id])

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { signIn } from '../../services/users'
-import Layout from "../../components/Layout/Layout"
 import { useHistory } from 'react-router-dom'
 import './SignOn.css'
 
@@ -24,6 +23,7 @@ export default function SignIn() {
         const user = await signIn(input)
         console.log(user)
         history.push('/')
+        document.location.href="/"
     }
 
     const handleInput = (e) => {
@@ -35,7 +35,7 @@ export default function SignIn() {
     }
 
     return (
-        <>
+        <div className="sign-container">
         <div onClick={toggleSignIn} className="sign-in">Sign-In</div>
         {logIn && (
             <div className="modal-sign">
@@ -71,6 +71,6 @@ export default function SignIn() {
         </div>
         </div>
     )}
-        </>
+        </div>
     )
 }
