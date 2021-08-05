@@ -55,7 +55,7 @@ const Nav = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #3feee6;
+    background-image: linear-gradient(to top, #eecda3, #ef629f);
 `;
 
 const Hamburger = styled.div`
