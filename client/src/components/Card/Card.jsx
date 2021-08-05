@@ -47,11 +47,11 @@ export default function Card(props) {
             <br />
             <div className="budget">
               Budget: {job.budget}
-            </div>
+              </div>
+              </Link>
             <div className="bid">
               <Bid />
             </div>
-            </Link>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
             <button value={job._id} onClick={handleDelete} id='dltButton'>DELETE</button>
            
