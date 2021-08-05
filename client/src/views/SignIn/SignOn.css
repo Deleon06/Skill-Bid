@@ -1,4 +1,10 @@
-/* .signin-container {
-    display: flex;
-    justify-content: center;
-} */
+.sign-container {
+    border: 1px solid red;
+}
+
+.modal-sign {
+    border: 1px solid black;
+    /* position: relative; */
+    position: relative;
+    top: 40px; left: 40px;
+}
