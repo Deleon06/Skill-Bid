@@ -1,3 +1,11 @@
 label {
     text-decoration: none;
 }
+
+bid-input {
+    width: 100px;
+}
+
+bid-btn {
+    width: 10px;
+}

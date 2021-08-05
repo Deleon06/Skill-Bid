@@ -11,8 +11,8 @@ export default function Bid() {
     return (
         <form onSubmit={handleSubmit}>
             <label>Bid:</label>
-            <input type="number" value={bid} required onChange={(e) => setBid(e.target.valueAsNumber)}/>
-            <input type="submit" value="add bid" />
+            <input className="bid-input" type="number" value={bid} required onChange={(e) => setBid(e.target.valueAsNumber)}/>
+            <input className="bid-btn" type="submit" value="add bid" />
         </form>
     )
 }

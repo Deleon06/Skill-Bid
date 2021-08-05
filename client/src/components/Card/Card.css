@@ -1,4 +1,16 @@
 .card-container {
+<<<<<<< HEAD
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	flex-flow: column;
+	width: 600px;
+	height: 300px;
+	border: 1px solid lightcyan;
+	background-image: linear-gradient(to right, #ffafbd, #ffc3a0);
+	border-radius: 5px;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+=======
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -6,6 +18,7 @@
   width: 600px;
   height: 300px;
   border: 2px solid black;
+>>>>>>> d8255deada1e655889698ebc37b9146b7287e1e5
 }
 
 .card-container:hover {
@@ -38,10 +51,29 @@
 }
 
 #editButton {
+<<<<<<< HEAD
+	width: 100px;
+	margin-top: 20px;
+	margin: 5px;
+	border-radius: 5px;
+	border: 0px;
+	background-color: lightcyan;
+=======
   width: 100px;
   margin-top: 20px;
+>>>>>>> d8255deada1e655889698ebc37b9146b7287e1e5
 }
+
 #dltButton {
+<<<<<<< HEAD
+	width: 100px;
+	margin-top: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	border: 0px;
+	background-color: lightcyan;
+=======
   width: 100px;
   margin-top: 5px;
+>>>>>>> d8255deada1e655889698ebc37b9146b7287e1e5
 }
