@@ -16,12 +16,13 @@ router.get("/posts/plumbing", getPlumbing);
 router.get("/posts/roof", getRoof);
 router.get("/posts/wall", getWall);
 
+
 // get id post
 router.get("/posts/:id", getPost);
 // create a post
 router.post("/posts", restrict, createPost);
 // update post
-router.put("/posts/:id", restrict, updatePost);
+router.put("/posts/edit/:id", restrict, updatePost);
 // delete post
 router.delete("/posts/:id", restrict, deletePost);
 

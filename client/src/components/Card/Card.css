@@ -1,38 +1,38 @@
 .card-container {
-	display: flex;
-	justify-content: center;
-	margin: 20px auto;
-	flex-flow: column;
-	width: 650px;
-	height: 300px;
-	border: 1px solid lightcyan;
-	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
-	border-radius: 5px;
-	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
-	color: black;
-  	text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  flex-flow: column;
+  width: 650px;
+  height: 300px;
+  border: 1px solid lightcyan;
+  background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
+  border-radius: 5px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  color: black;
+  text-decoration: none;
 }
 
 .card-container :hover {
-	opacity: 50%;
+  opacity: 50%;
 }
 a:link {
-	color: black;
+  color: black;
 }
 a:visited {
-	color: black;
+  color: black;
 }
-a:hover{
-	color:inherit;
-	background: inherit;
+a:hover {
+  color: inherit;
+  background: inherit;
 }
 
 .disabled {
-        pointer-events: none;
-        opacity: 0.3;
-      }
-*{
-	text-decoration: none;
+  pointer-events: none;
+  opacity: 0.3;
+}
+* {
+  text-decoration: none;
 }
 
 .type {
@@ -45,21 +45,20 @@ a:hover{
 }
 
 #editButton {
-	width: 100px;
-	margin-top: 20px;
-	margin: 5px;
-	border-radius: 5px;
-	border: 0px;
-	background-color: lightcyan;
-	display: flex;
-	justify-content: center;
+  width: 100px;
+  margin-top: 20px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: lightcyan;
+  display: flex;
+  justify-content: center;
 }
-
 #dltButton {
-	width: 100px;
-	margin-top: 5px;
-	margin: 5px;
-	border-radius: 5px;
-	border: 0px;
-	background-color: lightcyan;
+  width: 100px;
+  margin-top: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: lightcyan;
 }
