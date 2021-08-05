@@ -1,14 +1,31 @@
 .card-container {
-	display: flex;
-	justify-content: center;
-	margin: 0 auto;
-	flex-flow: column;
-	width: 600px;
-	height: 300px;
-	border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-flow: column;
+  width: 600px;
+  height: 300px;
+  border: 2px solid black;
 }
 
-.job {
+.card-container:hover {
+  opacity: 30%;
+}
+
+.job:hover,
+.type:hover,
+.description:hover,
+.budget:hover {
+  opacity: 40%;
+}
+
+.job,
+.type,
+.description,
+.budget,
+.bid {
+  color: black;
+  text-decoration: none;
 }
 
 .type {
@@ -20,13 +37,11 @@
 .budget {
 }
 
-
 #editButton {
-	width: 100px;
-	margin-top: 20px;
+  width: 100px;
+  margin-top: 20px;
 }
 #dltButton {
-	width: 100px;
-	margin-top: 5px;
-
+  width: 100px;
+  margin-top: 5px;
 }

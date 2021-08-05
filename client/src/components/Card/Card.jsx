@@ -2,6 +2,7 @@ import React, {useState, useEffect}  from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
+import Bid from "../Bid/Bid";
 import { Link } from "react-router-dom"
 import {getAllJobs, deleteJob} from "../../services/jobs"
 
@@ -46,6 +47,9 @@ export default function Card(props) {
             <br />
             <div className="budget">
               Budget: {job.budget}
+            </div>
+            <div className="bid">
+              <Bid />
             </div>
             </Link>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
