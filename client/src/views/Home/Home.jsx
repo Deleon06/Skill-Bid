@@ -5,7 +5,7 @@ import "./Home.css"
 
 export default function Home(props) {
     const [value, setValue] = useState()
-    const [budget, setBudget] = useState()
+    const [budget, setBudget] = useState(0)
     
     const handleChange = (e) => {
         const {id, value} = e.target;
@@ -17,12 +17,7 @@ export default function Home(props) {
         }
     
     const changeBudget = (e) => {
-        const {id, value} = e.target;
-
-        setBudget((prevInput) => ({
-            ...prevInput,
-            [id]: value,
-        }))
+        setBudget(budget)
     }
     
 return (
@@ -51,7 +46,8 @@ return (
                     type="range"
                     min="1"
                     max="200000"
-                    value="100000"
+                    value={budget}
+                    onChange={changeBudget}
                     />
             </form>
 
