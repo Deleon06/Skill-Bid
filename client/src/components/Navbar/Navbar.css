@@ -1,0 +1,16 @@
+.signedNav {
+	display: flex;
+}
+
+#signOut {
+	height: 22px;
+	margin-top: 14px;
+	margin-right: 100px;
+	margin-left: -40px;
+}
+
+#userName {
+	margin-top: 16px;
+	font-weight: bold;
+	padding-right: 50px;
+}

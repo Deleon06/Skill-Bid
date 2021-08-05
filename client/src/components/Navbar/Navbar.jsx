@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import About from '../Modal-About/Modal-About';
 import { signOut } from '../../services/users';
 import SignIn from '../../views/SignIn/SignIn';
+import './Navbar.css'
 
 const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,22 +25,24 @@ const Navbar = (props) => {
         </Hamburger>
         {props.user ? (
           <>
-            <div>{props.user?.username}</div>
-            <MenuLink href="/">Home</MenuLink>
-            <MenuLink href="/NewJob">New Post</MenuLink>
-            <MenuLink href="/ContactUs">Contact</MenuLink>
-            <About />
-              <button onClick={handleSignOut}>Sign Out</button>
+            <div className='signedNav'>
+            <div id='userName'>Welcome {props.user?.username}!</div>
+            <button id='signOut' onClick={handleSignOut}>Sign Out</button>
+              <MenuLink href="/">Home</MenuLink>
+              <About />
+            <MenuLink href="/NewJob">New Job</MenuLink>
+            <MenuLink href="/ContactUs">Contact Us</MenuLink>
+
+              </div>
          </>
         ) : (
-          <Menu isOpen={isOpen}>
-            <MenuLink href="/">Home</MenuLink>
-          
-            <MenuLink href="/ContactUs">Contact</MenuLink>
-            <About />
-            <SignIn />
+            <Menu isOpen={isOpen}>
+               <SignIn />
             {/* <MenuLink href="/sign-in">Sign-In</MenuLink> */}
             <MenuLink href="/sign-up">Sign-Up</MenuLink>
+            <MenuLink href="/">Home</MenuLink>
+            <About />
+            <MenuLink href="/ContactUs">Contact Us</MenuLink>
           </Menu>
         )}
         </Nav>
@@ -110,6 +113,7 @@ const Logo = styled.a`
         font-size: 1.3rem;
     }
 `
+
 export default Navbar;
 
 // export default function Navbar() {

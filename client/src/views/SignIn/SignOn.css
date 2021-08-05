@@ -1,10 +1,12 @@
 .sign-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    height: 16px;
+    width: 53px;
 }
 
 .modal-sign {
     border: 1px solid black;
-    /* position: relative; */
     position: relative;
-    top: 40px; left: 40px;
+    top: 200px; right: 640px;
+    width: 310px;
 }

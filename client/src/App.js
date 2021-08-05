@@ -25,18 +25,18 @@ function App() {
      <Home user={user} setUser={setUser} />
       </Route>
       <Route exact path="/post/:id">
-        <Details/>
+        <Details user={user} setUser={setUser}/>
       </Route>
       {user && (
         <>
         <Route exact path="/NewJob">
-          <NewJob />
+          <NewJob user={user} setUser={setUser}/>
           </Route>
           <Route exact path="/ContactUs">
-        <ContactUs />
+        <ContactUs user={user} setUser={setUser}/>
           </Route>
           <Route exact path='/posts/edit/:id'>
-        <UpdateJob />
+        <UpdateJob user={user} setUser={setUser}/>
       </Route>
           </>
       )}

@@ -5,7 +5,7 @@ import './ContactUs.css';
 
 
 
-export default function ContactUs() {
+export default function ContactUs(props) {
   const [input, setInput] = useState({});
   const history = useHistory();
 
@@ -25,7 +25,7 @@ export default function ContactUs() {
 }
 
   return (
-      <Layout>
+      <Layout user={props.user} setUser={props.setUser}>
         <div className="contactUs">
             <form className="contactForm" onSubmit={handleSubmit}>
                 <input 
