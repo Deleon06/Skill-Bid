@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from "react"
 import { useHistory, useParams } from "react-router-dom"
+
 import { getJob } from "../../services/jobs"
+
 
 
 export default function Detail(props) {
@@ -9,7 +11,9 @@ export default function Detail(props) {
   const [input, setInput] = useState("");
   const [job, setJob] = useState([])
 
+
   const { id } = useParams()
+
 
   const history = useHistory();
 
@@ -18,6 +22,7 @@ export default function Detail(props) {
       let job = await getJob(id)
       console.log(job)
         setJob(job)
+
     }
     fetchTasks()
 }, [id])
@@ -40,17 +45,15 @@ export default function Detail(props) {
 
 
   return (
+    
         <div id="container">
       <div className="detail-container">
-        
             <div>
             <h1>{job.name}</h1>
             <h2>{job.jobtype}</h2>
             <p>{job.description}</p>
             <h2>{job.budget}</h2>
             </div>
-            
-
       </div>
         
       <div id="form">
@@ -59,7 +62,6 @@ export default function Detail(props) {
             <label>Name</label>
             <input
               type="text"
-
               id="name"
               placeholder="Name"
               value={input.name}

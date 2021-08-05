@@ -25,12 +25,6 @@ export default function Card(props) {
   }
 
 
-    // const displayEditLink = (job) => {
-    //     if (job.userId === props.user?.id) {
-    //         return <Link to={`/edit-job/${job._id}`}>Edit</Link>
-    //     }
-    // }
-
     return (
         
       <>
