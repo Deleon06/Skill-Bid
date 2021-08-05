@@ -29,7 +29,7 @@ const Navbar = (props) => {
             <MenuLink href="/NewJob">New Post</MenuLink>
             <MenuLink href="/ContactUs">Contact</MenuLink>
             <About />
-            <button onClick={handleSignOut}>Sign Out</button>
+              <button onClick={handleSignOut}>Sign Out</button>
          </>
         ) : (
           <Menu isOpen={isOpen}>

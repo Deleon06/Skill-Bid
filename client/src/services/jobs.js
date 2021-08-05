@@ -22,7 +22,7 @@ export const createJob = async (input) =>{
 
 export const getJob = async (id) => {
   try {
-    const res = await api.get(`/posts/${id}`);
+    const res = await api.get(`/posts/${id}`)
     return res.data;
   } catch (e) {
     throw e;
