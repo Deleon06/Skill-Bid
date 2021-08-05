@@ -48,90 +48,9 @@ export const updateJob = async (id, post) => {
 }
 //job categories
 
-export const getBathroom = async () => {
+export const getCategory = async (type) => {
     try {
-        const res = await api.get('/posts/bathroom')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getCeiling = async () => {
-    try {
-        const res = await api.get('/posts/ceiling')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getElectrical = async () => {
-    try {
-        const res = await api.get('/posts/electrical')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getFloor = async () => {
-    try {
-        const res = await api.get('/posts/floor')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getKitchen = async () => {
-    try {
-        const res = await api.get('/posts/kitchen')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getLandscape = async () => {
-    try {
-        const res = await api.get('/posts/landscape')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getPaint = async () => {
-    try {
-        const res = await api.get('/posts/paint')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getPlumbing = async () => {
-    try {
-        const res = await api.get('/posts/plumbing')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getRoof = async () => {
-    try {
-        const res = await api.get('/posts/roof')
-        return res.data
-    } catch(e) {
-        throw e;
-    }
-} 
-
-export const getWall = async () => {
-    try {
-        const res = await api.get('/posts/wall')
+        const res = await api.get(`/posts/${type}`)
         return res.data
     } catch(e) {
         throw e;

@@ -2,28 +2,42 @@ import React, {useState, useEffect}  from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
-import Bid from "../Bid/Bid";
-import { Link } from "react-router-dom"
-import {getAllJobs, deleteJob} from "../../services/jobs"
+
+import {getAllJobs, deleteJob, getCategory} from "../../services/jobs"
+import {Link} from 'react-router-dom'
+
 
 AOS.init();
 
 export default function Card(props) {
-  const [jobs, setJobs] = useState([])
-  const [toggle, setToggle] = useState(false)
+
+    const [jobs, setJobs] = useState([])
+    const [toggle, setToggle] = useState(false)
 
     useEffect(() => {
         const fetchTasks = async () => {
-            let data = await getAllJobs()
-            setJobs(data)
+            console.log(props.value)
+            if (props.value === undefined || props.value.projectType === "All"){
+                let data = await getAllJobs()
+                setJobs(data)
+            }
+            else  {
+                let data = await getCategory(props.value.projectType)
+                setJobs(data)
+            }
         }
-        fetchTasks()
-    }, [toggle])
-  
-  async function handleDelete(e) {
-    await deleteJob(e.target.value)
-    setToggle(prevState => !prevState)
-  }
+
+        fetchTasks();   
+    },[props]) 
+    
+ 
+
+     async function handleDelete(e) {
+        await deleteJob(e.target.value)
+        setToggle(prevState => !prevState)
+        }
+          (prevState => !prevState)
+     }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
