@@ -2,7 +2,7 @@ import React, {useState, useEffect}  from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
-
+import Bid from "../Bid/Bid"
 import {getAllJobs, deleteJob, getCategory} from "../../services/jobs"
 import {Link} from 'react-router-dom'
 
@@ -36,8 +36,7 @@ export default function Card(props) {
         await deleteJob(e.target.value)
         setToggle(prevState => !prevState)
         }
-          (prevState => !prevState)
-     }
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
