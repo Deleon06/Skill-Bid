@@ -6,6 +6,7 @@ import "./Home.css"
 export default function Home(props) {
     const [value, setValue] = useState()
     
+    
     const handleChange = (e) => {
         const {id, value} = e.target;
 
@@ -23,6 +24,7 @@ return (
             <form>
                 <label>Filter By</label>
                 <select id="projectType" onChange={handleChange}>
+                    <option value="All">All</option>
                     <option value="Bathroom">Bathroom</option>
                     <option value="Ceiling">Ceiling</option>
                     <option value="Electrical">Electrical</option>

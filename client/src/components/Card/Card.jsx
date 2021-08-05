@@ -32,49 +32,54 @@ export default function Card(props) {
 =======
     const [jobs, setJobs] = useState([])
     const [toggle, setToggle] = useState(false)
-
+    
     useEffect(() => {
         const fetchTasks = async () => {
-            if (props.value === "Bathroom") {
+            console.log(props)
+            if (props.value === undefined){
+                let data = await getAllJobs()
+                setJobs(data)
+            }else if(props.value.projectType === "Bathroom") {
                 let data = await getBathroom()
-                setJobs(data.project)
-            }else if(props.value === "Ceiling"){
+                setJobs(data)
+            }else if(props.value.projectType === "Ceiling"){
                 let data = await getCeiling()
                 setJobs(data)
-            }else if(props.value === "Electrical") {
+            }else if(props.value.projectType === "Electrical") {
                 let data = await getElectrical()
                 setJobs(data)
-            }else if(props.value === "Floor"){
+            }else if(props.value.projectType === "Floor"){
                 let data = await getFloor()
                 setJobs(data)
-            }else if(props.value === "Kitchen"){
+            }else if(props.value.projectType === "Kitchen"){
                 let data = await getKitchen()
                 setJobs(data)
-            }else if(props === "Landscape"){
+            }else if(props.value.projectType === "Landscape"){
                 let data = await getLandscape()
                 setJobs(data)
-            }else if(props.value === "Paint") {
+            }else if(props.value.projectType === "Paint") {
                 let data = await getPaint()
                 setJobs(data)
-            }else if(props.value === "Plumbing"){
+            }else if(props.value.projectType === "Plumbing"){
                 let data = await getPlumbing()
                 setJobs(data)
-            }else if(props.value === "Roof"){
+            }else if(props.value.projectType === "Roof"){
                 let data = await getRoof()
                 setJobs(data)
-            }else if(props.value === "Wall"){
+            }else if(props.value.projectType === "Wall"){
                 let data = await getWall()
                 setJobs(data)
+            }else if(props.value.projectType === undefined){
+                let data = await getAllJobs()
+                setJobs(data)
             }else{
-            let data = await getAllJobs()
-            console.log(data)
-            setJobs(data)
-            console.log(props.value)
+                let data = await getAllJobs()
+                setJobs(data)
         }
     }
              fetchTasks();    
     
-        },[])
+        },)
 
         async function handleDelete(e) {
             await deleteJob(e.target.value)
