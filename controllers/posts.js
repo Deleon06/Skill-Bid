@@ -2,7 +2,7 @@ import Post from "../models/post.js";
 
 export const getAllPosts = async (req, res) => {
   try {
-    const posts = await Post.find({});
+    const posts = await Post.find();
     res.json(posts);
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -11,8 +11,8 @@ export const getAllPosts = async (req, res) => {
 
 export const getPost = async (req, res) => {
   try {
-    const { _id } = req.params;
-    const post = await Post.findById(_id);
+    const { id } = req.params;
+    const post = await Post.findById(id);
     if (post) {
       res.json(post);
     } else {
