@@ -6,7 +6,6 @@ import Bid from "../Bid/Bid"
 import {getAllJobs, deleteJob, getCategory} from "../../services/jobs"
 import {Link, useHistory} from 'react-router-dom'
 
-
 AOS.init();
 
 export default function Card(props) {
@@ -14,11 +13,16 @@ const history = useHistory();
 const [jobs, setJobs] = useState([])
 const [toggle, setToggle] = useState(false)
 
+  // let page = 0
+  // let count = 0
+  
     useEffect(() => {
         const fetchTasks = async () => {
-            console.log(props.value)
             if (props.value === undefined || props.value.projectType === "All"){
-                let data = await getAllJobs()
+              let data = await getAllJobs()
+              // let copyData = [...data]
+              // countSplice(copyData, count, count+10, page, "up")
+              console.log(data)
                 setJobs(data)
             }
             else  {
@@ -28,9 +32,7 @@ const [toggle, setToggle] = useState(false)
         }
 
         fetchTasks();   
-    },[props]) 
-    
- 
+    }, [props])
 
      async function handleDelete(e) {
         await deleteJob(e.target.value)
@@ -47,12 +49,12 @@ const [toggle, setToggle] = useState(false)
     }
   }
 
+  
 
     return (
         
       <>
         {jobs?.map((job) => (
-
           <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
@@ -68,7 +70,7 @@ const [toggle, setToggle] = useState(false)
             </div>
             <br />
             <div className="budget">
-              Budget: {job.budget}
+                Budget: { job.budget}
               </div>
               </Link>
             <div className="bid">
@@ -76,9 +78,11 @@ const [toggle, setToggle] = useState(false)
             </div>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
             <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
-          </div>
+            </div>
         ))}
       </>
     )
   }
 
+
+  

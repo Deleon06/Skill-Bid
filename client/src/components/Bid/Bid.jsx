@@ -14,7 +14,7 @@ export default function Bid({job}) {
         getInfo()
     }
     }, [id])
-// console.log(props)
+
     const handleSubmit = (e) => {
         e.preventDefault();
         window.localStorage.setItem(`bid-${job._id}`, bid);
