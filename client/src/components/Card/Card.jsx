@@ -27,8 +27,6 @@ export default function Card(props) {
         fetchTasks();   
     },[props]) 
     
- 
-
         async function handleDelete(e) {
             await deleteJob(e.target.value)
             setToggle(prevState => !prevState)
