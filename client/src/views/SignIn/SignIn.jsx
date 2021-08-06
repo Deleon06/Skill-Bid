@@ -42,7 +42,7 @@ export default function SignIn() {
                 <div onClick={toggleSignIn} className="overlay-signin"></div>
                 <div className="signin-content">
             <br />
-            <div className="sign-txt">Sign In</div>
+            <div className="sign-txt"></div>
             <br />
             <br />
             <form onSubmit={handleSubmit}>
@@ -67,7 +67,7 @@ export default function SignIn() {
                 <button>Sign In</button>
                 <br />
             </form>
-        <button className="close-signin" onClick={toggleSignIn}>X</button>
+        <button className="close-signin" onClick={toggleSignIn}>Close</button>
         </div>
         </div>
     )}

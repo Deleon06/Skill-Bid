@@ -1,5 +1,5 @@
 .footer {
-    position: fixed;
+    position: sticky;
     background-image: #3feee6;
     background-image: linear-gradient(to bottom right, #eecda3, #ef629f);
     bottom: 0;
@@ -8,4 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
+    flex-grow: 1;
+    /* flex-shrink: 0; */
 }

@@ -51,7 +51,7 @@ const [toggle, setToggle] = useState(false)
     return (
         
       <>
-        {jobs.map((job) => (
+        {jobs?.map((job) => (
 
           <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
             <Link to={`/post/${job._id}`} key={job._id}> 
@@ -72,7 +72,7 @@ const [toggle, setToggle] = useState(false)
               </div>
               </Link>
             <div className="bid">
-              <Bid />
+              <Bid job={job}/>
             </div>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
             <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
