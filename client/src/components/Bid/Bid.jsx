@@ -13,6 +13,7 @@ export default function Bid() {
             <label></label>
             <input className="bid-input" placeholder="Bid" type="number" value={bid} required onChange={(e) => setBid(e.target.valueAsNumber)}/>
             <input className="bid-btn" type="submit" value="Confirm Bid" />
+            <h1>{bid}</h1>
         </form>
     )
 }

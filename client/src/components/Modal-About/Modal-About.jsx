@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Modal.css";
 
 export default function About() {
@@ -19,7 +21,7 @@ export default function About() {
             <div onClick={toggleAbout} className="about">About</div>
 
             {about && (
-                <div className="modal">
+                <div data-aos="fade-up-left" data-aos-duration="1000" className="modal">
                     <div onClick={toggleAbout} className="overlay"></div>
                     <div className="modal-content">
                         <h2>Skill<span>Bid</span></h2>
