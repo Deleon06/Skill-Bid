@@ -4,7 +4,7 @@ import { useState } from "react"
 import "./Home.css"
 
 export default function Home(props) {
-    const [value, setValue] = useState()
+    const [value, setValue] = useState('All')
     const [budget, setBudget] = useState(0)
     
     const handleChange = (e) => {
@@ -17,12 +17,13 @@ export default function Home(props) {
         }
     
     const changeBudget = (e) => {
-        setBudget(budget)
+        const {value} = e.target;
+        setBudget(value)
     }
     
 return (
     <Layout user={props.user} setUser={props.setUser}>
-        <Card value ={value}/>
+        <Card value ={value} budget={budget}/>
         <div className="filter-container">
             <form>
                 <label>Filter By</label>
@@ -46,7 +47,6 @@ return (
                     type="range"
                     min="1"
                     max="200000"
-                    value={budget}
                     onChange={changeBudget}
                     />
             </form>

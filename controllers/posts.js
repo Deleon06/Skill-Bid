@@ -145,3 +145,12 @@ export const getWall = async (req, res) => {
     res.status(500).json({ error: e.message });
   }
 };
+
+export const getBudget = async (req, res) => {
+  try {
+    const posts = await Post.find({budget});
+    res.json(posts);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};

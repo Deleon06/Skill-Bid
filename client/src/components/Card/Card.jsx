@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
 import Bid from "../Bid/Bid"
-import {getAllJobs, deleteJob, getCategory} from "../../services/jobs"
+import {getAllJobs, deleteJob, getCategory, getBudget} from "../../services/jobs"
 import {Link, useHistory} from 'react-router-dom'
 
 
@@ -16,17 +16,21 @@ export default function Card(props) {
 
     useEffect(() => {
         const fetchTasks = async () => {
-            console.log(props.value)
-            if (props.value === undefined || props.value.projectType === "All"){
+            console.log(props.budget)
+            if (props.budget === 0 && props.value === "All"){
                 let data = await getAllJobs()
+                console.log(data)
                 setJobs(data)
+            } else if(props.budget !== 0 && props.value === "All"){
+                console.log(props.budget)
+                let data = await getBudget({$lt: props.budget})
+                console.log(data)
             }
             else  {
                 let data = await getCategory(props.value.projectType)
                 setJobs(data)
             }
         }
-
         fetchTasks();   
     },[props]) 
     
@@ -75,7 +79,6 @@ export default function Card(props) {
             </div>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
             <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
-            
             </div>
         ))}
         </>

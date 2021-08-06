@@ -1,6 +1,7 @@
 import { Router } from "express";
 import restrict from "../helpers/restrict.js";
-import { getAllPosts, createPost, getPost, updatePost, deletePost, getBathroom, getCeiling, getElectrical, getFloor, getKitchen, getLandscape, getPaint, getPlumbing, getRoof, getWall } from "../controllers/posts.js";
+import { getAllPosts, createPost, getPost, updatePost, deletePost, getBathroom, getCeiling, getElectrical, getFloor, getKitchen, getLandscape, getPaint, getPlumbing, getRoof, getWall, getBudget} from "../controllers/posts.js";
+
 
 const router = Router();
 // get all posts
@@ -15,6 +16,7 @@ router.get("/posts/paint", getPaint);
 router.get("/posts/plumbing", getPlumbing);
 router.get("/posts/roof", getRoof);
 router.get("/posts/wall", getWall);
+router.get("/posts/budget", getBudget)
 
 
 // get id post
