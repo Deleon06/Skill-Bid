@@ -14,11 +14,17 @@ const history = useHistory();
 const [jobs, setJobs] = useState([])
 const [toggle, setToggle] = useState(false)
 
+  // let page = 0
+  // let count = 0
+  
     useEffect(() => {
         const fetchTasks = async () => {
             console.log(props.value)
             if (props.value === undefined || props.value.projectType === "All"){
-                let data = await getAllJobs()
+              let data = await getAllJobs()
+              // let copyData = [...data]
+              // countSplice(copyData, count, count+10, page, "up")
+              console.log(data)
                 setJobs(data)
             }
             else  {
@@ -47,6 +53,7 @@ const [toggle, setToggle] = useState(false)
     }
   }
 
+  
 
     return (
         
@@ -68,7 +75,7 @@ const [toggle, setToggle] = useState(false)
             </div>
             <br />
             <div className="budget">
-              Budget: {job.budget}
+                Budget: { job.budget}
               </div>
               </Link>
             <div className="bid">
@@ -82,3 +89,5 @@ const [toggle, setToggle] = useState(false)
     )
   }
 
+
+  

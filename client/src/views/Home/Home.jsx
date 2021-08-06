@@ -22,7 +22,6 @@ export default function Home(props) {
     
 return (
     <Layout user={props.user} setUser={props.setUser}>
-        <Card value ={value}/>
         <div className="filter-container">
             <form>
                 <label>Filter By</label>
@@ -50,8 +49,9 @@ return (
                     onChange={changeBudget}
                     />
             </form>
-
         </div>
+        <Card value ={value}/>
+
     </Layout>
 )
 }
