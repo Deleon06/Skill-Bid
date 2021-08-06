@@ -4,13 +4,13 @@ import "aos/dist/aos.css";
 import "./Card.css";
 import Bid from "../Bid/Bid"
 import {getAllJobs, deleteJob, getCategory} from "../../services/jobs"
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 
 
 AOS.init();
 
 export default function Card(props) {
-
+  const history = useHistory();
     const [jobs, setJobs] = useState([])
     const [toggle, setToggle] = useState(false)
 
@@ -42,6 +42,8 @@ export default function Card(props) {
     e.preventDefault();
     if (window.confirm("Are you sure you want to delete the job post?")) {
       handleDelete(e)
+      history.push("/")
+      document.location.href="/"
     }
   }
 

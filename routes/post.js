@@ -22,7 +22,7 @@ router.get("/posts/:id", getPost);
 // create a post
 router.post("/posts", restrict, createPost);
 // update post
-router.put("/posts/edit/:id", restrict, updatePost);
+router.put("/posts/:id", restrict, updatePost);
 // delete post
 router.delete("/posts/:id", restrict, deletePost);
 
