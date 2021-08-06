@@ -1,5 +1,6 @@
 body.active-modal {
     overflow-y: hidden;
+    
 }
 
 .btn-modal {
@@ -17,6 +18,8 @@ body.active-modal {
     right: 0;
     bottom: 0;
     position: fixed;
+        z-index: 1;
+
 }
 
 .modal-content {

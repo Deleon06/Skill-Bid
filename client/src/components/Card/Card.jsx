@@ -10,9 +10,9 @@ import {Link, useHistory} from 'react-router-dom'
 AOS.init();
 
 export default function Card(props) {
-  const history = useHistory();
-    const [jobs, setJobs] = useState([])
-    const [toggle, setToggle] = useState(false)
+const history = useHistory();
+const [jobs, setJobs] = useState([])
+const [toggle, setToggle] = useState(false)
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -76,7 +76,6 @@ export default function Card(props) {
             </div>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
             <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
-           
           </div>
         ))}
       </>

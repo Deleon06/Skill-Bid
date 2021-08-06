@@ -9,4 +9,23 @@
     position: relative;
     top: 200px; right: 640px;
     width: 310px;
+    height: 150px;
+    background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.signin-content {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-txt {
+    display: flex;
+    justify-content: center;
+}
+
+.close-signin {
+    display: flex;
+    justify-self: center;
 }
