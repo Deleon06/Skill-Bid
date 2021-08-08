@@ -56,3 +56,12 @@ export const getCategory = async (type) => {
         throw e;
     }
 } 
+
+export const getBudget = async (budget) => {
+    try{
+        const res = await api.get(`/posts/budget${budget}`)
+        return res.data
+    }catch(e) {
+        throw e;
+    }
+}

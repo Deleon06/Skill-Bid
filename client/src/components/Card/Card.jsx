@@ -3,70 +3,73 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
 import Bid from "../Bid/Bid"
-import {getAllJobs, deleteJob, getCategory} from "../../services/jobs"
+import {getAllJobs, deleteJob, getCategory, getBudget} from "../../services/jobs"
 import {Link, useHistory} from 'react-router-dom'
+
 
 AOS.init();
 
 export default function Card(props) {
-const history = useHistory();
-const [jobs, setJobs] = useState([])
-const [toggle, setToggle] = useState(false)
+    const history = useHistory();
+    const [jobs, setJobs] = useState([])
+    const [toggle, setToggle] = useState(false)
 
-  // let page = 0
-  // let count = 0
-  
     useEffect(() => {
         const fetchTasks = async () => {
-            if (props.value === undefined || props.value.projectType === "All"){
-              let data = await getAllJobs()
-              // let copyData = [...data]
-              // countSplice(copyData, count, count+10, page, "up")
-              console.log(data)
+            if (props.budget === 0 && props.value === "All"){
+                let data = await getAllJobs()
+                console.log(data)
+                setJobs(data)
+            } else if(props.budget !== 0 && props.value === "All"){
+                console.log(props.budget)
+                let data = await getBudget(props.budget)
                 setJobs(data)
             }
             else  {
+                console.log(props.value)
                 let data = await getCategory(props.value.projectType)
+                console.log(data)
                 setJobs(data)
             }
         }
-
         fetchTasks();   
-    }, [props])
+    },[props]) 
+    
 
-     async function handleDelete(e) {
+    async function handleDelete(e) {
         await deleteJob(e.target.value)
         setToggle(prevState => !prevState)
-        }
-
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (window.confirm("Are you sure you want to delete the job post?")) {
-      handleDelete(e)
-      history.push("/")
-      document.location.href="/"
     }
-  }
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (window.confirm("Are you sure you want to delete the job post?")) {
+        handleDelete(e)
+        history.push("/")
+        document.location.href="/"
+        }
+    }
 
   
 
     return (
         
-      <>
-        {jobs?.map((job) => (
-          <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
+        <>
+        {jobs.map((job) => (
+
+            <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
-              Name of person: {job.name}
+                Name of person: {job.name}
             </div>
             <br />
             <div className="type">
-              Type of Job: {job.projectType}
+                Type of Job: {job.projectType}
             </div>
             <br />
             <div className="description">
-              Job Description: {job.description}
+                Job Description: {job.description}
             </div>
             <br />
             <div className="budget">
@@ -80,7 +83,7 @@ const [toggle, setToggle] = useState(false)
             <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
             </div>
         ))}
-      </>
+        </>
     )
   }
 
