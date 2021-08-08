@@ -146,10 +146,91 @@ export const getWall = async (req, res) => {
   }
 };
 
-export const getBudget = async (req, res) => {
+export const getBudgetUnder10000 = async (req, res) => {
   try {
-    const posts = await Post.find({budget});
+    const posts = await Post.find({budget: {$lt: 10000}});
     res.json(posts);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder20000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 20000}});
+    res.json(posts);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder30000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 30000}});
+    res.json(posts);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder40000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 40000}});
+    res.json(posts);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder50000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 50000}});
+    res.json(posts);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder60000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 60000}});
+    res.json(posts);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder70000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 70000}});
+    res.json(posts);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder80000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 80000}});
+    res.json(posts);40
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder90000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 90000}});
+    res.json(posts);40
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const getBudgetUnder100000 = async (req, res) => {
+  try {
+    const posts = await Post.find({budget: {$lt: 100000}});
+    res.json(posts);40
   } catch (e) {
     res.status(500).json({ error: e.message });
   }

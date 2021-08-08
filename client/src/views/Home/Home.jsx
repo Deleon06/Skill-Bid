@@ -45,8 +45,9 @@ return (
                 <label>Filter By Budget</label>
                 <input 
                     type="range"
-                    min="1"
-                    max="200000"
+                    min="0"
+                    max="100000"
+                    step="10000"
                     onChange={changeBudget}
                     />
             </form>

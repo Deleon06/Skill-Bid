@@ -16,18 +16,19 @@ export default function Card(props) {
 
     useEffect(() => {
         const fetchTasks = async () => {
-            console.log(props.budget)
             if (props.budget === 0 && props.value === "All"){
                 let data = await getAllJobs()
                 console.log(data)
                 setJobs(data)
             } else if(props.budget !== 0 && props.value === "All"){
                 console.log(props.budget)
-                let data = await getBudget({$lt: props.budget})
-                console.log(data)
+                let data = await getBudget(props.budget)
+                setJobs(data)
             }
             else  {
+                console.log(props.value)
                 let data = await getCategory(props.value.projectType)
+                console.log(data)
                 setJobs(data)
             }
         }
