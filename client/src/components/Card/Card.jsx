@@ -51,6 +51,7 @@ export default function Card(props) {
         }
     }
 
+  
 
     return (
         
@@ -72,11 +73,11 @@ export default function Card(props) {
             </div>
             <br />
             <div className="budget">
-                Budget: {job.budget}
-                </div>
-                </Link>
+                Budget: { job.budget}
+              </div>
+              </Link>
             <div className="bid">
-                <Bid />
+              <Bid job={job}/>
             </div>
             <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
             <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
@@ -86,3 +87,5 @@ export default function Card(props) {
     )
   }
 
+
+  

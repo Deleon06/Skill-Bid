@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout/Layout"
 import Card from "../../components/Card/Card"
+import ImageSlider from "../../components/ImageSlider/ImageSlider"
 import { useState } from "react"
 import "./Home.css"
 
@@ -22,7 +23,8 @@ export default function Home(props) {
     }
     
 return (
-    <Layout user={props.user} setUser={props.setUser}>
+  <Layout user={props.user} setUser={props.setUser}>
+    <ImageSlider />
         <Card value ={value} budget={budget}/>
         <div className="filter-container">
             <form>
@@ -51,8 +53,9 @@ return (
                     onChange={changeBudget}
                     />
             </form>
-
         </div>
+        <Card value ={value}/>
+
     </Layout>
 )
 }
