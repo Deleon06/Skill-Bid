@@ -26,13 +26,14 @@ export default function SignUp(props) {
 
     return (
         <Layout>
+            <div data-aos="zoom-in-up" data-aos-duration="750">
             <br />
-            Sign Up
             <br />
             <br />
-            <form onSubmit={handleSubmit}>
-            <label>Username</label>
+            <form className="submit-form"onSubmit={handleSubmit}>
+            <label className="username"><b>Username</b></label>
                 <br />
+                <div className="signup-content">
                 <input
                 type="text"
                 id="username"
@@ -57,10 +58,12 @@ export default function SignUp(props) {
                     value={input.password}
                     onChange={handleInput}
                 />
+                </div>
                 <br />
-                <button>Sign Up</button>
+                <button className="signup-btn">Sign Up</button>
                 <br />
             </form>
+            </div>
         </Layout>
     )
 }

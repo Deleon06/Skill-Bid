@@ -33,18 +33,20 @@
 	justify-self: center;
 }
 
-/* .close-signin {
-    width: 24px;
-    border-radius: 5px;
-    position: relative;
-    bottom: 150px;
-    left: 280px;
-    opacity: 80%;
-}  */
+.close-signin {
+	width: 24px;
+	border-radius: 21px;
+	position: relative;
+	bottom: 215px;
+	left: 290px;
+	opacity: 85%;
+}
 
-/* .close-signin :hover {
-    background-color: lightcyan;
-} */
+.close-signin :hover {
+	/* background-color: lightcyan; */
+	border: 0.1em solid #ffffff;
+	background-color: lightcyan;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
