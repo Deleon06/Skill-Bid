@@ -1,4 +1,4 @@
-.category-filter {
+.filter-container {
     display: flex;
     order: 0;
 	flex-direction: column;
@@ -29,8 +29,7 @@ li{
 }
 
 @media screen and (max-width: 600px) {
-	.category-filter {
-        position: block;
+	.filter-container {
 		margin: 10px auto;
         height: auto;
         top: 10px;
