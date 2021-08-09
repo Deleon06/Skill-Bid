@@ -1,9 +1,7 @@
 .card-container {
 	display: flex;
-	justify-content: center;
+	flex-flow: column wrap;
 	margin: 20px auto;
-	flex-direction: column;
-	width: 650px;
 	height: 300px;
 	border: 1px solid lightcyan;
 	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
@@ -11,10 +9,7 @@
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
 	color: black;
 	text-decoration: none;
-	order: 1;
-	flex: 3;
-	position: relative;
-	/* bottom: 270px; */
+	width: 50%;
   }
   
   .card-container :hover {
@@ -39,23 +34,11 @@
 	text-decoration: none;
   }
   
-  .type {
-  }
-  
-  .description {
-  }
-  
-  .budget {
-  }
-  
   #editButton {
 	width: 100px;
-	margin-top: 20px;
-	margin: 5px;
 	border-radius: 5px;
 	border: 0px;
 	background-color: lightcyan;
-	display: flex;
 	justify-content: center;
   }
   #dltButton {
@@ -69,7 +52,7 @@
   
   @media screen and (max-width: 600px) {
 	.card-container{
-		bottom: 10px;
+		bottom: 0px;
 		position: block;
 		width: 300px;
 		margin: 10px auto;

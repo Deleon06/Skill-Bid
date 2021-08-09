@@ -1,25 +1,18 @@
 .category-filter {
     display: flex;
-    flex-direction: column;
     order: 0;
-    flex: 1;
-    margin: 20px;
 	flex-direction: column;
-	width: 250px;
-	height: 300px;
+	height: auto;
 	border: 1px solid lightcyan;
 	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
 	border-radius: 5px;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-    position: relative;
-    left: 110px;
-    bottom:265
+    width: 20%;
+    height: 100%;
+    justify-content: space-between;
+    margin: auto;
 }
 
-.catergory-filter{
-    display: flex;
-    flex-direction: row;
-}
 
 #budget_input{
     width: 30px;
@@ -29,10 +22,6 @@
 .mainview{
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
-}
-
-.budget-filter{
 }
 
 li{
@@ -40,15 +29,11 @@ li{
 }
 
 @media screen and (max-width: 600px) {
-	.filter-container {
+	.category-filter {
         position: block;
-		margin: 10px;
-        left: 55px;
-        flex-direction: row;
+		margin: 10px auto;
         height: auto;
+        top: 10px;
+        left:0px
 	}
-    .catergory-filter{
-        display: flex;
-        flex-direction: row;
-    }
 }
