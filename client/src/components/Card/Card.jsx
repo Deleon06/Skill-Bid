@@ -31,7 +31,6 @@ export default function Card(props) {
             }
         }
         fetchTasks();
-        console.log(jobs)
     },[props]) 
     
     async function handleDelete(e) {

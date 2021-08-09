@@ -32,7 +32,7 @@ export default function ImageSlider() {
             {index === current && (
               <>
                 <div className='SlideDiv'>
-                <img src={slide.image} alt="goods-image" className="sliderImg"
+                <img src={slide.image} alt="goods-img" className="sliderImg"
                   width="1000px" height="300px" /></div>
                 {window.innerWidth > 420 ? (
                   <div className="sliderName">{slide.name}</div>

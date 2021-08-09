@@ -24,7 +24,7 @@ export default function About() {
                     <div onClick={toggleAbout} className="overlay"></div>
                     <div className="modal-content">
                         <h2 className="title">Skill<span>Bid</span></h2>
-                        <p>
+                        <p id="aboutContent">
                             Skill-Bid is a web based application that allows users to list auction a listing and have potential freelancers bid on their project.
                         </p>
                         <button className="close-modal" onClick={toggleAbout}>X</button>

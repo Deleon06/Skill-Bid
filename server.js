@@ -4,6 +4,7 @@ import morgan from "morgan"
 import db from "./db/index.js"
 import routes from "./routes/index.js"
 
+
 const app = express();
 const PORT = process.env.PORT || 4567;
 
@@ -14,6 +15,7 @@ app.use(morgan("dev"));
 app.use("/api", routes)
 
 app.get("/", (req, res) => res.send("<h1>API DOCUMENTATION<h1>"))
+
 
 db.on("connected", () => {
   console.log("Connected to MongoDB")

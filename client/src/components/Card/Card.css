@@ -1,6 +1,6 @@
 .card-container {
 	display: flex;
-	flex-flow: column wrap;
+	flex-direction: column;
 	margin: 20px auto;
 	height: 300px;
 	border: 1px solid lightcyan;
@@ -37,12 +37,11 @@
   #editButton {
 	width: 100px;
 	border-radius: 5px;
+	margin: 5px;
 	border: 0px;
 	background-color: lightcyan;
 	justify-content: center;
 	cursor: pointer;
-	position: relative;
-	left: 200px;
   }
   #editButton:hover{
 	box-shadow: 1px 1px 1px purple;
@@ -50,15 +49,11 @@
 
   #dltButton {
 	width: 100px;
-	margin-top: 5px;
 	margin: 5px;
 	border-radius: 5px;
 	border: 0px;
 	background-color: lightcyan;
 	cursor: pointer;
-	position: relative;
-	left: 350px;
-	bottom: 27px;
   }
 
   #dltButton:hover {
@@ -71,6 +66,9 @@
 		position: block;
 		width: 300px;
 		margin: 10px auto;
-		height: 190px;
+		height: 275px;
+	}
+	h1{
+		font-size: 16px !important;
 	}
 }

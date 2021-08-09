@@ -24,7 +24,8 @@ export default function Bid({job}) {
         e.preventDefault();
         window.localStorage.setItem(`bid-${job._id}`, bid);
         setId(job._id);
-        console.log(bid)
+      console.log(bid)
+      document.location.href = "/"
     }
     const handleChange = (e) => {
         e.preventDefault();
@@ -35,7 +36,7 @@ export default function Bid({job}) {
         <form onSubmit={handleSubmit}>
             <label></label>
             <input className="bid-input" placeholder="Bid" type="number" value={bid} required onChange={((e) => handleChange(e) )}/>
-            <input className="bid-btn" type="submit" value="Confirm Bid" />
+        <input className="bid-btn" type="submit" value="Confirm Bid" />
             <h1>Current Bid: ${bid}</h1>
         </form>
     )

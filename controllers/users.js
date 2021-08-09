@@ -81,5 +81,6 @@ export const verify = async (req, res) => {
 
 // export const defineAbilitiesFor = (user) => {
 //   const { can, cannot, rules } = new AbilityBuilder(Ability);
-//   can('manage', '')
+//   can(['update', 'delete'], 'Post', { userId: user.id });
+//   return new Ability(rules);
 // }
