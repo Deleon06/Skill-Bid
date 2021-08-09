@@ -1,9 +1,9 @@
 .filter-container {
-    display: flex;
-    flex-direction: column;
-    order: 0;
-    flex: 1;
-    margin: 20px;
+	display: flex;
+	flex-direction: column;
+	order: 0;
+	flex: 1;
+	margin: 20px;
 	flex-direction: column;
 	width: 250px;
 	height: 300px;
@@ -11,24 +11,22 @@
 	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
 	border-radius: 5px;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-    position: relative;
-    left: 110px;
+	position: relative;
 }
 
-#budget_input{
-    width: 30px;
-    cursor: pointer;
-
+#budget_input {
+	width: 30px;
+	cursor: pointer;
 }
-.mainview{
-    display: flex;
-    flex-direction: column;
-    border: solid 1px black;
-}
-
-.budget-filter{
+.mainview {
+	display: flex;
+	flex-direction: column;
+	border: solid 1px black;
 }
 
-li{
-    list-style-type: none;
+.budget-filter {
+}
+
+li {
+	list-style-type: none;
 }

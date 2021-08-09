@@ -12,7 +12,7 @@ AOS.init();
 export default function Card(props) {
     const history = useHistory();    
     const [jobs, setJobs] = useState([])
-    const [toggle, setToggle] = useState(false)
+  const [setToggle] = useState(false)
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -41,13 +41,14 @@ export default function Card(props) {
 
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+      e.preventDefault();
         if (window.confirm("Are you sure you want to delete the job post?")) {
         handleDelete(e)
         history.push("/")
         document.location.href="/"
         }
     }
+  
 
     return (
         

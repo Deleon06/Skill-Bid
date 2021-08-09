@@ -1,4 +1,6 @@
 import Post from "../models/post.js";
+import User from "../models/user.js";
+
 
 export const getAllPosts = async (req, res) => {
   try {
@@ -36,15 +38,33 @@ export const createPost = async (req, res) => {
 
 export const updatePost = async (req, res) => {
   try {
-    const { id } = req.params
-    const { body } = req
-    const newPost = await Post.findByIdAndUpdate(id, body, { new: true })
-    newPost.userId = id
-    res.status(201).json( newPost );
+    const { id } = req.params;
+    const { body } = req;
+      const newPost = await Post.findByIdAndUpdate(id, body, { new: true })
+      newPost.userId = id
+    res.status(201).json(newPost);
   } catch (e) {
     res.status(424).json({ error: e.message })
   }
 };
+
+// export const updatePost = async (req, res) => {
+//   try {
+//     const { id } = req.params
+//     const { body } = req
+//     const user = await User.findById(id);
+//     const post = await Post.findById(id);
+//     if (user === post.userId) {
+//       const newPost = await Post.findByIdAndUpdate(id, body, { new: true })
+//       newPost.userId = id
+//       res.status(201).json(newPost);
+//     } else {
+//       return res.status(403).json({error: "Unauthorized"})  
+//     } 
+//   } catch (e) {
+//     res.status(424).json({ error: e.message })
+//   }
+// };
 
 export const deletePost = async (req, res) => {
   try {
