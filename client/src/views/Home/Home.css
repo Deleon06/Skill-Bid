@@ -31,3 +31,17 @@
 li{
     list-style-type: none;
 }
+
+@media screen and (max-width: 600px) {
+	.filter-container {
+        position: block;
+		margin: 10px;
+        left: 55px;
+        flex-direction: row;
+        height: auto;
+	}
+    .catergory-filter{
+        display: flex;
+        flex-direction: row;
+    }
+}

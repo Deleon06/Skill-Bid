@@ -67,3 +67,12 @@
 	background-color: lightcyan;
   }
   
+  @media screen and (max-width: 600px) {
+	.card-container{
+		bottom: 10px;
+		position: block;
+		width: 300px;
+		margin: 10px auto;
+		height: 190px;
+	}
+}

@@ -21,9 +21,10 @@ return (
     <ImageSlider />
         <div className="mainview">
             <Card value ={value} budget={budget}/>
-            <div className="filter-container">
-                <form>
-                    <label>Filter By</label>
+            <div className="category-filter">
+                <form className="">
+                    <label>Filter By Category</label>
+                    <br />
                     <select onChange={handleChange}>
                         <option value="All">All</option>
                         <option value="Bathroom">Bathroom</option>
