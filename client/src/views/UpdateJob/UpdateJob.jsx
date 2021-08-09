@@ -83,13 +83,15 @@ export default function UpdateJob(props) {
             onChange={handleChange} />
         <br />
         <label>Budget</label><br />
-        <input name="budget" placeholder="$"
-          type="number"
-          id="budget"
-          value={editedJob.budget}
-          onChange={handleChange}
-        />
-        <br />
+        <input 
+            name="budget" 
+            placeholder="$"
+            type="number"
+            id="budget"
+            value={editedJob.budget}
+            onChange={handleChange}
+          />
+                <br />
         <button id="editBtn" type="submit">Edit Post</button><br />
           </form>
           </div>

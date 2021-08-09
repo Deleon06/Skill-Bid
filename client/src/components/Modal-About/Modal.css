@@ -7,12 +7,13 @@ body.active-modal {
 	background-color: white;
 }
 
-/* .btn-modal {
+.btn-modal {
 	padding: 10px 20px;
 	display: block;
 	margin: 100px auto 0;
 	font-size: 18px;
-} */
+}
+
 
 .modal,
 .overlay {
@@ -27,21 +28,27 @@ body.active-modal {
 }
 
 .modal-content {
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	line-height: 1.4;
-	background-image: linear-gradient(to bottom right, darkcyan, cyan);
-	padding: 14px 28px;
-	border-radius: 3px;
-	max-width: 600px;
-	min-width: 300px;
-	border-radius: 15px 50px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    /* background-image: linear-gradient(to bottom right, #808080, #3fada8);
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+    border-radius: 15px 50px; */
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    margin: 6rem auto 8.1rem auto;
+	height: 200px;
+	width: 400px;
 }
 
 .modal-content h2 {
-	color: cyan;
+    background-image: linear-gradient(to right, #be93c5, #7bc6cc);
 }
 
 .modal-content h2 span {
@@ -50,11 +57,23 @@ body.active-modal {
 }
 
 .close-modal {
-	position: absolute;
-	top: 15px;
-	right: 20px;
-	padding: 5px 7px;
-	border-radius: 95%;
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    padding: 5px 7px;
+    border-radius: 95%;
+      background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: 0.25s;
+  width: 30px;
 }
 
 .about {

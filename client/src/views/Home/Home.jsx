@@ -9,7 +9,6 @@ export default function Home(props) {
     const [budget, setBudget] = useState(0)
     
     const handleChange = (e) => {
-        
         setValue(e.target.value)
     }
     

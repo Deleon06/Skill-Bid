@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { AbilityBuilder, Ability } from '@casl/ability';
+// import { AbilityBuilder, Ability } from '@casl/ability';
 import User from "../models/user.js";
 
 const SALT_ROUNDS = process.env.SALT_ROUNDS || 11;

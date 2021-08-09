@@ -235,3 +235,4 @@ export const getBudgetUnder100000 = async (req, res) => {
     res.status(500).json({ error: e.message });
   }
 };
+
