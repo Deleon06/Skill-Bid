@@ -40,7 +40,14 @@
 	border: 0px;
 	background-color: lightcyan;
 	justify-content: center;
+	cursor: pointer;
+	position: relative;
+	left: 200px;
   }
+  #editButton:hover{
+	box-shadow: 1px 1px 1px purple;
+  }
+
   #dltButton {
 	width: 100px;
 	margin-top: 5px;
@@ -48,6 +55,14 @@
 	border-radius: 5px;
 	border: 0px;
 	background-color: lightcyan;
+	cursor: pointer;
+	position: relative;
+	left: 350px;
+	bottom: 27px;
+  }
+
+  #dltButton:hover {
+	  box-shadow: 1px 1px 1px purple;
   }
   
   @media screen and (max-width: 600px) {
