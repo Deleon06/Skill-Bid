@@ -31,7 +31,11 @@ export default function Card(props) {
                 setJobs(filteredData)
             }
         }
+<<<<<<< HEAD
+        fetchTasks();
+=======
         fetchTasks();   
+>>>>>>> f50b7972efd2176868cefe607cbb310c09f5cc72
     },[props]) 
     
     async function handleDelete(e) {

@@ -1,6 +1,6 @@
-.category-filter {
-	display: flex;
-	order: 0;
+.filter-container {
+    display: flex;
+    order: 0;
 	flex-direction: column;
 	height: auto;
 	border: 1px solid lightcyan;
@@ -27,8 +27,7 @@ li {
 }
 
 @media screen and (max-width: 600px) {
-	.category-filter {
-		position: block;
+	.filter-container {
 		margin: 10px auto;
 		height: auto;
 		top: 10px;
