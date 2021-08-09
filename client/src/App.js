@@ -8,6 +8,7 @@ import NewJob from "./views/NewJob/NewJob"
 import ContactUs from './views/ContactUs/ContactUs';
 import UpdateJob from './views/UpdateJob/UpdateJob';
 import Details from "./views/Details/Details"
+import "./App.css"
 
 function App() {
   const [user, setUser] = useState(null)

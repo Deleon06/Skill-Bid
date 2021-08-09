@@ -36,13 +36,13 @@ export default function SignIn() {
 
     return (
         <div className="sign-container">
-        <div onClick={toggleSignIn} className="sign-in">Sign-In</div>
+        <div onClick={toggleSignIn} className="sign-in">Already a member? Sign In</div>
         {logIn && (
             <div data-aos="fade-down"  data-aos-duration="450" className="modal-sign">
-                <div onClick={toggleSignIn} className="overlay-signin"></div>
+                <div onClick={toggleSignIn} className="overlay-signin"><b>Sign-In</b></div>
                 <div className="signin-content">
             <br />
-            <div className="sign-txt">Sign In</div>
+            <div className="sign-txt"></div>
             <br />
             <br />
             <form onSubmit={handleSubmit}>
@@ -64,7 +64,7 @@ export default function SignIn() {
                     onChange={handleInput}
                 />
                 <br />
-                <button>Sign In</button>
+                <button className="sign-btn" >Sign In</button>
                 <br />
             </form>
         <button className="close-signin" onClick={toggleSignIn}>X</button>

@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Modal.css";
 
@@ -21,12 +20,12 @@ export default function About() {
             <div onClick={toggleAbout} className="about">About</div>
 
             {about && (
-                <div data-aos="fade-up-left" data-aos-duration="1000" className="modal">
+                <div data-aos="fade-up" data-aos-duration="1000" className="modal">
                     <div onClick={toggleAbout} className="overlay"></div>
                     <div className="modal-content">
-                        <h2>Skill<span>Bid</span></h2>
+                        <h2 className="title">Skill<span>Bid</span></h2>
                         <p>
-                            A web based application that allows users to list auction a listing and have potential freelancers bid on their project.
+                            Skill-Bid is a web based application that allows users to list auction a listing and have potential freelancers bid on their project.
                         </p>
                         <button className="close-modal" onClick={toggleAbout}>X</button>
                     </div>

@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-
+// import { AbilityBuilder, Ability } from '@casl/ability';
 import User from "../models/user.js";
 
 const SALT_ROUNDS = process.env.SALT_ROUNDS || 11;
@@ -78,3 +78,8 @@ export const verify = async (req, res) => {
     res.status(401).json({ error: "Not Authorized" });
   }
 };
+
+// export const defineAbilitiesFor = (user) => {
+//   const { can, cannot, rules } = new AbilityBuilder(Ability);
+//   can('manage', '')
+// }

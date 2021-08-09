@@ -26,24 +26,28 @@ const Navbar = (props) => {
         {props.user ? (
           <>
             <div className='signedNav'>
-            <div id='userName'>Welcome {props.user?.username}!</div>
-            <button id='signOut' onClick={handleSignOut}>Sign Out</button>
-              <MenuLink href="/">Home</MenuLink>
+            <div id='userName'>Hello {props.user?.username}!</div>
+              <button id='signOut' onClick={handleSignOut}>Sign Out</button>
+            <Menu isOpen={isOpen}>
               <About />
-            <MenuLink href="/NewJob">New Job</MenuLink>
-            <MenuLink href="/ContactUs">Contact Us</MenuLink>
-
+            <MenuLink href="/NewJob" id="newJob">New Job</MenuLink>
+            <MenuLink href="/ContactUs" id="signedContactUs">Contact Us</MenuLink>
+              </Menu>      
               </div>
          </>
         ) : (
+          <div className="unsignedNav">
             <Menu isOpen={isOpen}>
+            <MenuLink href="/sign-up" id="signUp"></MenuLink>
                <SignIn />
             {/* <MenuLink href="/sign-in">Sign-In</MenuLink> */}
-            <MenuLink href="/sign-up">Sign-Up</MenuLink>
-            <MenuLink href="/">Home</MenuLink>
+
+        
             <About />
-            <MenuLink href="/ContactUs">Contact Us</MenuLink>
-          </Menu>
+                <MenuLink href="/ContactUs" id="contactUs">Contact Us</MenuLink>
+             
+              </Menu>
+              </div>
         )}
         </Nav>
     );
@@ -55,6 +59,7 @@ const Nav = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    /* background-image: linear-gradient(to left,#fbfbfb, #ef629f); */
     background-image: linear-gradient(to top, #eecda3, #ef629f);
     position: relative;
     z-index: 20;
@@ -110,6 +115,7 @@ const Logo = styled.a`
     text-decoration: none;
     font-weight: 800;    
     font-size: 1.7rem;
+    opacity: 0.9;
 
     span{
         font-weight: 300;

@@ -1,74 +1,104 @@
 .jobedit-container {
-	display: flex;
-	justify-content: center;
-	align-items: top;
-	border: 1px solid black;
-	margin: 100px auto;
-	padding-top: 20px;
-	width: 400px;
-	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-	position: relative;
-	border-radius: 10px;
-	height: 200px;
-	background-image: linear-gradient(to bottom right, darkcyan, cyan);
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  border: 1px solid black;
+  margin: 100px auto;
+  padding-top: 20px;
+  width: 400px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 200px;
+  /* background-image: linear-gradient(to bottom right, darkcyan, cyan); */
+  background: #fbfbfb;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  margin: 6rem auto 8.1rem auto;
+  height: 400px;
+  width: 400px;
+  padding: 10px;
 }
 
 h1 {
-	display: flex;
-	justify-content: center;
-	padding: 1rem 0;
-	color: Cyan;
-	text-decoration: none;
-	font-weight: 800;
-	font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  color: Cyan;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.7rem;
 }
 
 h1 span {
-	font-weight: 300;
-	font-size: 1.3rem;
+  font-weight: 300;
+  font-size: 1.3rem;
 }
 
 input {
-	width: 300px;
-	justify-self: center;
+  width: 300px;
+  justify-self: center;
+  border-radius: 5px;
+  padding: 1px;
 }
 
 .dropdown {
-	width: 307px;
-	border-radius: 7px;
+  width: 307px;
+  border-radius: 7px;
 }
 
 textarea {
-	width: 300px;
-	height: 100px;
+  width: 300px;
+  height: 100px;
 }
 
 .btn {
-	margin-left: 100px;
-	width: 100px;
-	background-color: lightcyan;
-	border-radius: 10px;
+  margin-left: 100px;
+  width: 100px;
+  background-color: lightcyan;
+  border-radius: 10px;
 }
 
 .btn :hover {
-	background-color: cyan;
+  background-color: cyan;
 }
 
 .input {
-	background-color: lightcyan;
-	border-radius: 7px;
+  background-color: lightcyan;
+  border-radius: 7px;
 }
 
 body {
-	background-image: linear-gradient(to right, lightgrey, silver);
+  background-image: linear-gradient(to right, lightgrey, silver);
 }
 
 #editTitle {
-	text-align: center;
-	margin-bottom: -100px;
-	color: Cyan;
+  text-align: center;
+  margin-bottom: -100px;
+  color: Cyan;
 }
 
 #editBtn {
-	margin-top: 10px;
+  margin-top: 10px;
+  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 100px;
+  transition: 0.25s;
+  width: 153px;
+}
+#editBtn:hover {
+  box-shadow: 0px 1px 18px #24c64f;
+  border: 0.1em solid #ffffff;
+  background-color: lightcyan;
+  transform: scale(1.1);
+}
+.type-filter {
+  width: 308px;
+  border-radius: 5px;
 }

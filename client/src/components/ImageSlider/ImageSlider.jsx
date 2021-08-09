@@ -33,11 +33,10 @@ export default function ImageSlider() {
               <>
                 <div className='SlideDiv'>
                 <img src={slide.image} alt="goods-image" className="sliderImg"
-                  width="1000px" height="300px" />
+                  width="1000px" height="300px" /></div>
                 {window.innerWidth > 420 ? (
                   <div className="sliderName">{slide.name}</div>
                   ) : null}
-                  </div>
               </>
             )}
           </div>
