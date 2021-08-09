@@ -17,6 +17,8 @@
 
 #budget_input{
     width: 30px;
+    cursor: pointer;
+
 }
 .mainview{
     display: flex;
@@ -25,7 +27,6 @@
 }
 
 .budget-filter{
-
 }
 
 li{
