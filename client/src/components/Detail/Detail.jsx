@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from "react"
 import { useHistory, useParams } from "react-router-dom"
 import { getJob } from "../../services/jobs"
+import "./Detail.css"
 
 export default function Detail(props) {
 
@@ -47,8 +48,11 @@ export default function Detail(props) {
       <div className="detail-container">
             <div>
             <h1>{job.name}</h1>
+            <hr/>
             <h2>{job.projectType}</h2>
+            <hr/>
             <p>{job.description}</p>
+            <hr/>
             <h2>{job.budget}</h2>
             </div>
       </div>
@@ -84,7 +88,7 @@ export default function Detail(props) {
             onChange={handleChange}
             />
               <br />
-            <button>Send</button>
+            <button className="send-btn">Send</button>
         </form>
       </div>
       </div>

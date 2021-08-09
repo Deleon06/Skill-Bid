@@ -9,7 +9,6 @@ export default function Home(props) {
     const [budget, setBudget] = useState(0)
     
     const handleChange = (e) => {
-        
         setValue(e.target.value)
     }
     
@@ -22,7 +21,7 @@ return (
     <ImageSlider />
         <div className="mainview">
             <Card value ={value} budget={budget}/>
-            <div className="filter-container">
+            <div data-aos="zoom-in-up" data-aos-duration="1000" className="filter-container">
                 <form>
                     <label>Filter By</label>
                     <select onChange={handleChange}>
