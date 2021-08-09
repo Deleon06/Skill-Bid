@@ -28,7 +28,6 @@ export default function NewJobs(props) {
         <div>
             <Layout user={props.user} setUser={props.setUser}>
                 <>
-                    <h1>New<span>Job</span></h1>
                     <br />
                 <div className="jobpost-container">
 
@@ -64,15 +63,6 @@ export default function NewJobs(props) {
                         </label>
                         <br />
                         <br />
-                        <textarea className="input"
-                            placeholder="Job description"
-                            type="text"
-                            id="description"
-                            value={input.description}
-                            onChange={handleChange}
-                        />
-                        <br />
-                        <br />
                         <label>Budget</label>
                         <br />
                         <br />
@@ -82,6 +72,15 @@ export default function NewJobs(props) {
                             id="budget"
                             value={input.budget}
                             onChange={handleChange}
+                        />
+                        <br />
+                        <br />
+                        <textarea className="input"
+                        placeholder="Job description"
+                        type="text"
+                        id="description"
+                        value={input.description}
+                        onChange={handleChange}
                         />
                         <br />
                         <br />

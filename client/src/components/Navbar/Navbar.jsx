@@ -55,6 +55,7 @@ const Nav = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    /* background-image: linear-gradient(to left,#fbfbfb, #ef629f); */
     background-image: linear-gradient(to top, #eecda3, #ef629f);
     position: relative;
     z-index: 20;
