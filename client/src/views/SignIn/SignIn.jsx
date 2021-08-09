@@ -45,6 +45,7 @@ export default function SignIn() {
             <div className="sign-txt"></div>
             <br />
             <br />
+            <div className='sign-form'>
             <form onSubmit={handleSubmit}>
                 <label>Email</label>
                 <br />
@@ -67,6 +68,7 @@ export default function SignIn() {
                 <button className="sign-btn" >Sign In</button>
                 <br />
             </form>
+            </div>
         <button className="close-signin" onClick={toggleSignIn}>X</button>
         </div>
         </div>
