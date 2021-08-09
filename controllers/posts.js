@@ -212,7 +212,7 @@ export const getBudgetUnder70000 = async (req, res) => {
 export const getBudgetUnder80000 = async (req, res) => {
   try {
     const posts = await Post.find({budget: {$lt: 80000}});
-    res.json(posts);
+    res.json(posts);40
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
@@ -221,7 +221,7 @@ export const getBudgetUnder80000 = async (req, res) => {
 export const getBudgetUnder90000 = async (req, res) => {
   try {
     const posts = await Post.find({budget: {$lt: 90000}});
-    res.json(posts);
+    res.json(posts);40
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
@@ -230,7 +230,7 @@ export const getBudgetUnder90000 = async (req, res) => {
 export const getBudgetUnder100000 = async (req, res) => {
   try {
     const posts = await Post.find({budget: {$lt: 100000}});
-    res.json(posts);
+    res.json(posts);40
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
