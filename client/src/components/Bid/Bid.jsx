@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import "./Bid.css"
 
 export default function Bid({job}) {
     const [bid, setBid] = useState('');
