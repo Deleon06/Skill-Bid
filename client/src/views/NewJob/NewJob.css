@@ -49,8 +49,10 @@ textarea {
     border-radius: 10px;
 }
 
-.btn :hover {
+.btn:hover {
     background-color: cyan;
+    border-color: 0.1em solid white;
+    transform: scale(1.1);
 }
 
 .input {
