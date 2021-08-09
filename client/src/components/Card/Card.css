@@ -13,6 +13,8 @@
 	text-decoration: none;
 	order: 1;
 	flex: 3;
+	position: relative;
+	bottom: 270px;
   }
   
   .card-container :hover {
