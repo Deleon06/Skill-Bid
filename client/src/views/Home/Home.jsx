@@ -20,7 +20,6 @@ return (
   <Layout user={props.user} setUser={props.setUser}>
     <ImageSlider />
         <div className="mainview">
-            <Card value ={value} budget={budget}/>
             <div data-aos="zoom-in-up" data-aos-duration="1000" className="filter-container">
                 <form>
                     <label>Filter By</label>
@@ -112,6 +111,7 @@ return (
                     /></li>
                 </form>
             </div>
+            <Card value ={value} budget={budget} user={props.user}/>
         </div>
     </Layout>
 )

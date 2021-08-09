@@ -13,11 +13,6 @@ const Navbar = (props) => {
       props.setUser(null);
     };
 
-    const upperCase = (str) => {
-      return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-      })
-    }
     return (
         <Nav>
             <Logo href="/">
@@ -31,7 +26,7 @@ const Navbar = (props) => {
         {props.user ? (
           <>
             <div className='signedNav'>
-            <div id='userName'>Hello {upperCase(props.user?.username)}!</div>
+            <div id='userName'>Hello {props.user?.username}!</div>
               <button id='signOut' onClick={handleSignOut}>Sign Out</button>
             <Menu isOpen={isOpen}>
               <About />
@@ -46,6 +41,7 @@ const Navbar = (props) => {
             <MenuLink href="/sign-up" id="signUp"></MenuLink>
                <SignIn />
             {/* <MenuLink href="/sign-in">Sign-In</MenuLink> */}
+
         
             <About />
                 <MenuLink href="/ContactUs" id="contactUs">Contact Us</MenuLink>
@@ -128,25 +124,3 @@ const Logo = styled.a`
 `
 
 export default Navbar;
-
-// export default function Navbar() {
-//     return (
-//         <>
-//             <nav class="leftnav">
-//                 <a href="#home">Home</a>
-//                 <a href="#contact">Contact Us</a>
-//                 <a href="#about">About Us</a>
-//             </nav>
-//             <nav class="rightnav">
-//                 <a href="#home">Sign In</a>
-//                 <a href="#contact">Sign Up</a>
-//             </nav>
-//             <nav class="rightnav">
-//                 <a href="#post-project">Post Project</a>
-//                 <a href="#inbox">Inbox</a>
-//                 <a href="account">Account</a>
-//             </nav>
-//         </>
-//     )
-// }
-
