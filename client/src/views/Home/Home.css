@@ -1,4 +1,31 @@
 .filter-container {
     display: flex;
-    margin: 200px;
+    flex-direction: column;
+    order: 0;
+    flex: 1;
+    margin: 20px;
+	flex-direction: column;
+	width: 250px;
+	height: 300px;
+	border: 1px solid lightcyan;
+	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
+	border-radius: 5px;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+#budget_input{
+    width: 30px;
+}
+.mainview{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+}
+
+.budget-filter{
+    
+}
+
+li{
+    list-style-type: none;
 }

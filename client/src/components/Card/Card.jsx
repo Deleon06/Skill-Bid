@@ -3,14 +3,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
 import Bid from "../Bid/Bid"
-import {getAllJobs, deleteJob, getCategory, getBudget} from "../../services/jobs"
+import {getAllJobs, deleteJob, getCategory, getBudget, getCategoryAndBudget} from "../../services/jobs"
 import {Link, useHistory} from 'react-router-dom'
 
 
 AOS.init();
 
 export default function Card(props) {
-    const history = useHistory();
+    const history = useHistory();    
     const [jobs, setJobs] = useState([])
     const [toggle, setToggle] = useState(false)
 
@@ -18,24 +18,22 @@ export default function Card(props) {
         const fetchTasks = async () => {
             if (props.budget === 0 && props.value === "All"){
                 let data = await getAllJobs()
-                console.log(data)
                 setJobs(data)
             } else if(props.budget !== 0 && props.value === "All"){
-                console.log(props.budget)
                 let data = await getBudget(props.budget)
                 setJobs(data)
-            }
-            else  {
-                console.log(props.value)
-                let data = await getCategory(props.value.projectType)
-                console.log(data)
+            } else  if(props.budget === 0 && props.value !== "All"){
+                let data = await getCategory(props.value)
                 setJobs(data)
+            } else {
+                let data = await getCategory(props.value)
+                let filteredData = data.filter(data => data.budget < props.budget)
+                setJobs(filteredData)
             }
         }
         fetchTasks();   
     },[props]) 
     
-
     async function handleDelete(e) {
         await deleteJob(e.target.value)
         setToggle(prevState => !prevState)
@@ -51,13 +49,10 @@ export default function Card(props) {
         }
     }
 
-  
-
     return (
         
         <>
         {jobs.map((job) => (
-
             <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
