@@ -42,6 +42,7 @@ const [toggle, setToggle] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     if (window.confirm("Are you sure you want to delete the job post?")) {
       handleDelete(e)
       history.push("/")

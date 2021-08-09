@@ -25,5 +25,7 @@ router.post("/posts", restrict, createPost);
 router.put("/posts/:id", restrict, updatePost);
 // delete post
 router.delete("/posts/:id", restrict, deletePost);
+//
+
 
 export default router;

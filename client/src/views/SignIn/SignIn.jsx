@@ -36,7 +36,7 @@ export default function SignIn() {
 
     return (
         <div className="sign-container">
-        <div onClick={toggleSignIn} className="sign-in">Sign-In</div>
+        <div onClick={toggleSignIn} className="sign-in">Already a member? Sign In</div>
         {logIn && (
             <div data-aos="fade-down"  data-aos-duration="450" className="modal-sign">
                 <div onClick={toggleSignIn} className="overlay-signin"></div>

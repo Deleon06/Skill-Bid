@@ -1,35 +1,36 @@
-.sign-container {
-    /* border: 1px solid red; */
-    height: 16px;
-    width: 53px;
+.sign-in {
+	font-size: 14.4px;
+	color: gainsboro;
+	font-weight: bold;
+	padding-right: 100px;
 }
-
 .modal-sign {
-    border: 1px solid black;
-    position: relative;
-    top: 200px; right: 640px;
-    width: 310px;
-    height: 250px;
-    background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
-    border-radius: 10px;
-    z-index: 1;
+	border: 1px solid black;
+	position: relative;
+	top: 200px;
+	right: 640px;
+	width: 310px;
+	height: 250px;
+	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
+	border-radius: 10px;
+	z-index: 1;
 }
 
 .signin-content {
-    position: relative;
+	position: relative;
 }
 
 .sign-txt {
-    display: flex;
-    /* justify-content: center;
+	display: flex;
+	/* justify-content: center;
     background-color: red;
     height: 20px;
     width: 50px; */
 }
 
 .close-signin {
-    display: flex;
-    justify-self: center;
+	display: flex;
+	justify-self: center;
 }
 
 /* .close-signin {
@@ -48,58 +49,70 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 .close-signin {
-  background: none;
-  border: 0;
-  box-sizing: border-box;
-  color: transparent;
-  cursor: pointer;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
-  left: 50%;
-  letter-spacing: 1.5px;
-  line-height: 90px;
-  outline: none;
-  overflow: hidden;
-  padding: 10px 0 0;
-  position: relative;
-  /* top: 80px; */
-  text-transform: uppercase;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.2s ease-in;
-  width: 100px;
+	background: none;
+	border: 0;
+	box-sizing: border-box;
+	color: transparent;
+	cursor: pointer;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	left: 50%;
+	letter-spacing: 1.5px;
+	line-height: 90px;
+	outline: none;
+	overflow: hidden;
+	padding: 10px 0 0;
+	position: relative;
+	/* top: 80px; */
+	text-transform: uppercase;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.2s ease-in;
+	width: 100px;
 }
 
 .close-signin::before,
 .close-signin::after {
-  background-color: white;
-  content: '';
-  display: block;
-  height: 1px;
-  left: 0;
-  position: absolute;
-  transform-origin: center left;
-  transition: all 0.2s ease-in;
-  width: 141.4214px;
-  z-index: -1;
+	background-color: white;
+	content: '';
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform-origin: center left;
+	transition: all 0.2s ease-in;
+	width: 141.4214px;
+	z-index: -1;
 }
 
 .close-signin::before {
-  top: 0;
-  transform: rotate(45deg);
+	top: 0;
+	transform: rotate(45deg);
 }
 
 .close-signin::after {
-  bottom: 0;
-  transform: rotate(-45deg);
+	bottom: 0;
+	transform: rotate(-45deg);
 }
 
 .close-signin:hover {
-  color: #8A2387;
+	color: #8a2387;
 }
 
 .close-signin:hover::before,
 .close-signin:hover::after {
-  height: 50px;
-  transform: rotate(0deg);
+	height: 50px;
+	transform: rotate(0deg);
+}
+
+@media screen and (max-width: 800px) {
+	.sign-in {
+		padding-bottom: 10px;
+		margin-top: 10px;
+		padding-top: 10px;
+	}
+
+	.sign-container {
+		padding-left: 80px;
+	}
 }
