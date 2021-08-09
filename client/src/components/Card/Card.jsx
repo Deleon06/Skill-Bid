@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
 import Bid from "../Bid/Bid"
-import {getAllJobs, deleteJob, getCategory, getBudget} from "../../services/jobs"
+import {getAllJobs, deleteJob, getCategory, getBudget, getCategoryAndBudget} from "../../services/jobs"
 import {Link, useHistory} from 'react-router-dom'
 
 
@@ -12,7 +12,7 @@ AOS.init();
 export default function Card(props) {
     const history = useHistory();    
     const [jobs, setJobs] = useState([])
-  const [setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false)
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -41,14 +41,13 @@ export default function Card(props) {
 
 
     const handleSubmit = async (e) => {
-      e.preventDefault();
+        e.preventDefault();
         if (window.confirm("Are you sure you want to delete the job post?")) {
         handleDelete(e)
         history.push("/")
         document.location.href="/"
         }
     }
-  
 
     return (
         
