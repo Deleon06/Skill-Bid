@@ -7,32 +7,30 @@
 	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
 	border-radius: 5px;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-    width: 20%;
-    height: 100%;
-    justify-content: space-between;
-    margin: auto;
+	width: 20%;
+	height: 100%;
+	justify-content: space-between;
+	margin: auto;
 }
 
-
-#budget_input{
-    width: 30px;
-    cursor: pointer;
-
+#budget_input {
+	width: 30px;
+	cursor: pointer;
 }
-.mainview{
-    display: flex;
-    flex-direction: column;
+.mainview {
+	display: flex;
+	flex-direction: column;
 }
 
-li{
-    list-style-type: none;
+li {
+	list-style-type: none;
 }
 
 @media screen and (max-width: 600px) {
 	.filter-container {
 		margin: 10px auto;
-        height: auto;
-        top: 10px;
-        left:0px
+		height: auto;
+		top: 10px;
+		left: 0px;
 	}
 }

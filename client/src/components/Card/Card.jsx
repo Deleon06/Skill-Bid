@@ -3,8 +3,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
 import Bid from "../Bid/Bid"
-import {getAllJobs, deleteJob, getCategory, getBudget} from "../../services/jobs"
+import {getAllJobs, deleteJob, getCategory, getBudget, getCategoryAndBudget} from "../../services/jobs"
 import {Link, useHistory} from 'react-router-dom'
+
 
 AOS.init();
 
@@ -30,18 +31,22 @@ export default function Card(props) {
                 setJobs(filteredData)
             }
         }
+<<<<<<< HEAD
         fetchTasks();
+=======
+        fetchTasks();   
+>>>>>>> f50b7972efd2176868cefe607cbb310c09f5cc72
     },[props]) 
     
     async function handleDelete(e) {
         await deleteJob(e.target.value)
         setToggle(prevState => !prevState)
     }
-    
+
+
     const handleSubmit = async (e) => {
-        e.preventDefault()
-        if(props.user.id === e.target.parentElement.accessKey) {
-         (window.confirm("Are you sure you want to delete the job post?")) 
+        e.preventDefault();
+        if (window.confirm("Are you sure you want to delete the job post?")) {
         handleDelete(e)
         history.push("/")
         document.location.href="/"
@@ -52,7 +57,7 @@ export default function Card(props) {
         
         <>
         {jobs.map((job) => (
-            <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} accessKey={job.userId}>
+            <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
                 Name of person: {job.name}
@@ -73,10 +78,8 @@ export default function Card(props) {
             <div className="bid">
               <Bid job={job}/>
             </div>
-            <div className="button-div">
-                <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
-                <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
-            </div>
+            <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
+            <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
             </div>
         ))}
         </>

@@ -20,7 +20,7 @@ export default function Footer() {
             <a rel="noreferrer" href="https://github.com/CameronIzadi" target="_blank">
             <FontAwesomeIcon icon={faGithub} id="git" />
             </a>
-            <a rel="noreferrer" href="" target="_blank">
+            <a rel="noreferrer" href="https://www.linkedin.com" target="_blank">
             <FontAwesomeIcon icon={faLinkedin} id="link" />
             </a>
             <p>Gabriel Deleon</p> 

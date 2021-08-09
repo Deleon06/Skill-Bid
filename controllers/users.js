@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-// import { AbilityBuilder, Ability } from '@casl/ability';
+import { AbilityBuilder, Ability } from '@casl/ability';
 import User from "../models/user.js";
 
 const SALT_ROUNDS = process.env.SALT_ROUNDS || 11;
@@ -79,7 +79,8 @@ export const verify = async (req, res) => {
   }
 };
 
-// export const defineAbilitiesFor = (user) => {
-//   const { can, cannot, rules } = new AbilityBuilder(Ability);
-//   can('manage', '')
-// }
+export const defineAbilitiesFor = (user) => {
+  const { can, cannot, rules } = new AbilityBuilder(Ability);
+  can(['update', 'delete'], 'Post', { userId: user.id });
+  return new Ability(rules);
+}
