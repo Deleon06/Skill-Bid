@@ -1,5 +1,11 @@
 .signedNav {
 	display: flex;
+	flex-direction: row;
+}
+
+.unsignedNav {
+	display: flex;
+	flex-direction: row;
 }
 
 #signOut {
@@ -7,10 +13,60 @@
 	margin-top: 14px;
 	margin-right: 100px;
 	margin-left: -40px;
+	background-color: pink;
+	color: black;
+	border-radius: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#signUp {
+	background-image: url("https://storage.googleapis.com/production-ipage-v1-0-6/496/279496/bSViHZIR/392c33b78d514cf4bf62308e44292188");
+	background-size: contain;
+	background-size: 50%;
+	background-position-x: 1em;
+	color: gainsboro;
+	font-weight: bold;
+	font-size: 14.4px;
+	background-repeat: no-repeat;
+	margin-right: 10px;
 }
 
 #userName {
 	margin-top: 16px;
+	color: gainsboro;
 	font-weight: bold;
 	padding-right: 50px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+#contactUs,
+#signedContactUs,
+#newJob {
+	color: gainsboro;
+}
+
+@media screen and (max-width: 800px) {
+	.signedNav {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.unsignedNav {
+		margin-left: 50px;
+		margin-top: -65px;
+	}
+	#signOut {
+		margin-left: 100px;
+		margin-bottom: 10px;
+	}
+
+	#userName {
+		margin-left: 50px;
+	}
+
+	#signUp {
+		margin-top: 10px;
+		margin-left: 12px;
+	}
 }
