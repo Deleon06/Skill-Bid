@@ -31,7 +31,7 @@ export default function Bid({job}) {
             <label></label>
             <input className="bid-input" placeholder="Bid" type="number" value={bid} required onChange={((e) => handleChange(e) )}/>
             <input className="bid-btn" type="submit" value="Confirm Bid" />
-            <h1>{bid}</h1>
+            <h1>Current Bid: ${bid}</h1>
         </form>
     )
 }
