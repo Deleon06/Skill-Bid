@@ -11,7 +11,8 @@ AOS.init();
 export default function Card(props) {
     const history = useHistory();    
     const [jobs, setJobs] = useState([])
-    const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false)
+  
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -33,7 +34,7 @@ export default function Card(props) {
         fetchTasks();
     },[props]) 
     
-    async function handleDelete(e) {
+  async function handleDelete(e) {
         await deleteJob(e.target.value)
         setToggle(prevState => !prevState)
     }
@@ -94,7 +95,7 @@ export default function Card(props) {
         <button className="up" onClick={handleUp} > → </button> */}
         {jobs.map((job) => (
           <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container"
-            id={job.projectType}>
+            id={job.projectType} key={job.name}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
                 Name of person: {job.name}

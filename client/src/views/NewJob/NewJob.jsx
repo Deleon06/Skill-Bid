@@ -77,7 +77,9 @@ export default function NewJobs(props) {
                         <br />
                 <br />
                 <h4 className='jobDesc'>Job Description</h4>
-                        <textarea className="input"
+                <textarea
+                  maxlength="50"
+                  className="input"
                         placeholder="Job description"
                         type="text"
                         id="description"
