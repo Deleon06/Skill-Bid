@@ -33,4 +33,8 @@ li {
 		top: 10px;
 		left: 0px;
 	}
+
+    .filter {
+        width: 65px
+    }
 }

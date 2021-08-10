@@ -31,7 +31,6 @@ export default function Card(props) {
             }
         }
         fetchTasks();
-        console.log(jobs)
     },[props]) 
     
     async function handleDelete(e) {
@@ -41,8 +40,6 @@ export default function Card(props) {
     
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(props.user.id)
-        console.log(e.target.parentElement.accessKey)
         if(props.user.id === e.target.parentElement.accessKey) {
          if(window.confirm("Are you sure you want to delete the job post?")) {
         handleDelete(e)
@@ -56,7 +53,7 @@ export default function Card(props) {
         
         <>
         {jobs.map((job) => (
-            <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} >
+            <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} key={job._id}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
                 Name of person: {job.name}

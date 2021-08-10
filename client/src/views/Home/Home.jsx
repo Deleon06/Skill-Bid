@@ -23,7 +23,7 @@ return (
             <div data-aos="zoom-in-up" data-aos-duration="1000" className="filter-container">
                 <form>
                     <label>Filter By</label>
-                    <select onChange={handleChange}>
+                    <select className="filter" onChange={handleChange}>
                         <option value="All">All</option>
                         <option value="Bathroom">Bathroom</option>
                         <option value="Ceiling">Ceiling</option>
