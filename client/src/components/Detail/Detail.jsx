@@ -51,7 +51,7 @@ export default function Detail(props) {
             <h2 id="jobName">{job.name}</h2>
             <h4 id="pType">Type: {job.projectType}</h4>
             <p id="jobDesc">{job.description}</p>
-        <h4 id="budget">Budget: ${job.budget}</h4>
+        <h4 id="budgetDetail">Budget: ${job.budget}</h4>
       </div>
  
       <div id="form">
