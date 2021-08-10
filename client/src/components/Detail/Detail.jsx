@@ -80,8 +80,8 @@ export default function Detail(props) {
             <label id="descLabel">Description</label> <br />
             <input
               type="text"
-
               id="description"
+              placeholder="Description"
               value={input.description}
             onChange={handleChange}
             />

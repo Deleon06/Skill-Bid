@@ -1,5 +1,5 @@
 .footer {
-	/* position: sticky; */
+	/* position: relative; */
 	background-image: #3feee6;
 	background-image: linear-gradient(to bottom right, #eecda3, #ef629f);
 	bottom: 0;
@@ -13,7 +13,7 @@
 	flex-grow: 1;
 	color: gainsboro;
 	padding-bottom: 15px;
-	margin-top: 110px;
+	margin-top: 480px;
 	/* flex-shrink: 0; */
 }
 
