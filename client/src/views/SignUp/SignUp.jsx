@@ -31,27 +31,23 @@ export default function SignUp(props) {
             <br />
             <br />
             <form className="submit-form"onSubmit={handleSubmit}>
-            <label className="username"><b>Username</b></label>
-                <br />
-                <div className="signup-content">
+            <div className="signup-content">
+            <h4 className="username">Username</h4>
                 <input
                 type="text"
                 id="username"
                 value={input.username}
                 onChange={handleInput}
                 />
-                <br />
-                <label>Email</label>
-                <br />
+             
+                <h4 className="email">Email</h4>
                 <input 
                     type="email"
                     id="email"
                     value={input.email}
                     onChange={handleInput}
                 />
-                <br />
-                <label>Password</label>
-                <br />
+                <h4 className="password">Password</h4>
                 <input 
                     type="password"
                     id="password"
@@ -59,7 +55,7 @@ export default function SignUp(props) {
                     onChange={handleInput}
                 />
                 </div>
-                <br />
+      
                 <button className="signup-btn">Sign Up</button>
                 <br />
             </form>

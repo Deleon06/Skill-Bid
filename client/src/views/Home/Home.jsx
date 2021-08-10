@@ -21,9 +21,9 @@ return (
     <ImageSlider />
         <div className="mainview">
             <div data-aos="zoom-in-up" data-aos-duration="1000" className="filter-container">
-                <form>
-                    <label>Filter By</label>
-                    <select onChange={handleChange}>
+                <form id="filterByType">
+                    <label id='filterBy'>Filter By </label>
+                    <select id="optionFilter" onChange={handleChange}>
                         <option value="All">All</option>
                         <option value="Bathroom">Bathroom</option>
                         <option value="Ceiling">Ceiling</option>
@@ -37,72 +37,71 @@ return (
                         <option value="Wall">Wall</option>
                     </select>
                 </form>
-                <form className="budget-filter" onChange={changeBudget}>
-                    <label>Filter By Budget</label>
-                    <li><label for="under10000">Budget Under $10,000</label>
+                <form className="budget-filter" onChange={changeBudget}>                   
+                    <li><label for="under10000">Under<br /> $10,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under10000"
                         value="10000"
                     /></li>
-                    <li><label for="under20000">Budget Under $20,000</label>
+                    <li><label for="under20000">Under<br /> $20,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under20000"
                         value="20000"
                     /></li>
-                    <li><label for="under30000">Budget Under $30,000</label>
+                    <li><label for="under30000">Under<br /> $30,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under30000"
                         value="30000"
                     /></li>
-                    <li><label for="under40000">Budget Under $40,000</label>
+                    <li><label for="under40000">Under<br /> $40,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under40000"
                         value="40000"
                     /></li>
-                    <li><label for="under50000">Budget Under $50,000</label>
+                    <li><label for="under50000">Under<br /> $50,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under50000"
                         value="50000"
                     /></li>
-                    <li><label for="under60000">Budget Under $60,000</label>
+                    <li><label for="under60000">Under<br /> $60,000</label>
                     <input
                         id="budget_input"
                         type="checkbox"
                         name="under60000"
                         value="60000"
                     /></li>
-                    <li><label for="under70000">Budget Under $70,000</label>
+                    <li><label for="under70000">Under<br /> $70,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under70000"
                         value="70000"
                     /></li>
-                    <li><label for="under80000">Budget Under $80,000</label>
+                    <li><label for="under80000">Under<br /> $80,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under80000"
                         value="80000"
                     /></li>
-                    <li><label for="under90000">Budget Under $90,000</label>
+                    <li><label for="under90000">Under<br /> $90,000</label>
                     <input 
                         id="budget_input"
                         type="checkbox"
                         name="under90000"
                         value="90000"
                     /></li>
-                    <li><label for="under100000">Budget Under $100,000</label>
+                    <li><label for="under100000">Under<br /> $100,000</label>
                     <input 
                         id="budget_input"
                         type="checkbox"

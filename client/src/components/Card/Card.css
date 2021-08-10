@@ -1,74 +1,85 @@
 .card-container {
-	display: flex;
-	flex-direction: column;
-	margin: 20px auto;
-	height: 300px;
-	border: 1px solid lightcyan;
-	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
-	border-radius: 5px;
-	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-	color: black;
-	text-decoration: none;
-	width: 50%;
-  }
-  
-  .card-container :hover {
-	opacity: 50%;
-  }
-  a:link {
-	color: black;
-  }
-  a:visited {
-	color: black;
-  }
-  a:hover {
-	color: inherit;
-	background: inherit;
-  }
-  
-  .disabled {
-	pointer-events: none;
-	opacity: 0.3;
-  }
-  * {
-	text-decoration: none;
-  }
-  
-  #editButton {
-	width: 100px;
-	border-radius: 5px;
-	margin: 5px;
-	border: 0px;
-	background-color: lightcyan;
-	justify-content: center;
-	cursor: pointer;
-  }
-  #editButton:hover{
-	box-shadow: 1px 1px 1px purple;
-  }
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  height: 300px;
+  border: 1px solid lightcyan;
+  background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
+  border-radius: 5px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  color: black;
+  text-decoration: none;
+  width: 50%;
+}
 
-  #dltButton {
-	width: 100px;
-	margin: 5px;
-	border-radius: 5px;
-	border: 0px;
-	background-color: lightcyan;
-	cursor: pointer;
-  }
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: inherit;
+  background: inherit;
+}
 
-  #dltButton:hover {
-	  box-shadow: 1px 1px 1px purple;
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+* {
+  text-decoration: none;
+}
+
+#editButton {
+  width: 100px;
+  border-radius: 5px;
+  margin: 5px;
+  border: 0px;
+  background-color: lightcyan;
+  justify-content: center;
+  cursor: pointer;
+}
+#editButton:hover {
+  box-shadow: 1px 1px 1px purple;
+}
+
+#dltButton {
+  width: 100px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: lightcyan;
+  cursor: pointer;
+}
+
+#dltButton:hover {
+  box-shadow: 1px 1px 1px purple;
+}
+
+@media screen and (max-width: 600px) {
+  .card-container {
+    bottom: 0px;
+    position: block;
+    width: 300px;
+    margin: 10px auto;
+    height: 300px;
   }
-  
-  @media screen and (max-width: 600px) {
-	.card-container{
-		bottom: 0px;
-		position: block;
-		width: 300px;
-		margin: 10px auto;
-		height: 275px;
-	}
-	h1{
-		font-size: 16px !important;
-	}
+  h1 {
+    font-size: 16px !important;
+  }
+}
+.job,
+.type,
+.description {
+  padding: 5x;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: 17px;
+}
+
+.budget {
+  padding: 15px;
+  font-weight: bold;
 }

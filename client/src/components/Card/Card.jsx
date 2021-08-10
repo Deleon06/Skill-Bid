@@ -38,13 +38,15 @@ export default function Card(props) {
         setToggle(prevState => !prevState)
     }
     
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        if(props.user.id === e.target.parentElement.accessKey) {
-         (window.confirm("Are you sure you want to delete the job post?")) 
-        handleDelete(e)
-        history.push("/")
-        document.location.href="/"
+  const handleSubmit = async (e) => {
+    console.log(props.user.id)
+    console.log(e.target.parentElement.accessKey)
+    if (props.user.id === e.target.parentElement.accessKey) {
+      if (window.confirm("Are you sure you want to delete the job post?")) { 
+      handleDelete(e)
+      history.push("/")
+      document.location.href = "/"
+    }
         }
     }
   
@@ -91,7 +93,8 @@ export default function Card(props) {
         {/* <button className="down" onClick={handleDown} > ← </button>
         <button className="up" onClick={handleUp} > → </button> */}
         {jobs.map((job) => (
-            <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container" id={job.projectType} accessKey={job.userId}>
+          <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container"
+            id={job.projectType}>
             <Link to={`/post/${job._id}`} key={job._id}> 
             <div className="job">
                 Name of person: {job.name}
@@ -106,14 +109,14 @@ export default function Card(props) {
             </div>
             <br />
             <div className="budget">
-                Budget: { job.budget}
+                Budget: ${ job.budget}
               </div>
               </Link>
             <div className="bid">
               <Bid job={job}/>
             </div>
-            <div className="button-div">
-                <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
+            <div className="button-div" accessKey={job.userId}>
+              <button id='editButton'><Link to={`/posts/edit/${job._id}`}>EDIT</Link></button>
                 <button value={job._id} onClick={handleSubmit} id='dltButton'>DELETE</button>
             </div>
             </div>

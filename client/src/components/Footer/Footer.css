@@ -28,7 +28,8 @@ body {
 }
 @media screen and (max-width: 600px) {
   .footer {
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
   }
