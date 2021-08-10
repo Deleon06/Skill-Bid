@@ -1,19 +1,22 @@
 .sign-in {
 	position: relative;
-	left: 10px;
 }
 
 .modal-sign {
-	position: relative;
-	top: 275px;
-	right: 400px;
+	/* position: relative; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 50px;
+	right: 130px;
 	z-index: 1;
 	background: #fbfbfb;
 	border-radius: 8px;
 	box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
 	height: 375px;
-	margin: 6rem auto 8.1rem auto;
+	/* margin: 6rem auto 8.1rem auto; */
 	width: 329px;
+	margin-top: 30px;
 }
 
 .signin-content {
@@ -73,4 +76,12 @@
 	font-family: "Raleway SemiBold", sans-serif;
 	position: relative;
 	top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.modal-sign {
+		position: fixed;
+		z-index: 1;
+		left: 20px;
+	}
 }

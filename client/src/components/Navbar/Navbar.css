@@ -59,7 +59,6 @@
 
 	.unsignedNav {
 		margin-left: 50px;
-		margin-top: -65px;
 	}
 	#signOut {
 		margin-left: 100px;
@@ -71,7 +70,8 @@
 	}
 
 	#signUp {
-		margin-top: 10px;
+		margin-top: 5px;
+		padding-bottom: 30px;
 		margin-left: 12px;
 	}
 }
