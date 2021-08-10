@@ -1,39 +1,26 @@
-/* .sign-in {
-	font-size: 14.4px;
-	color: gainsboro;
-	font-weight: bold;
-	padding-right: 100px;
-}
-.signin-content {
-	border: 1px solid black;
+.sign-in {
 	position: relative;
-	top: 200px;
-	right: 640px;
-	width: 310px;
-	height: 250px;
+	left: 10px;
+}
+
+.modal-sign {
+	position: relative;
+	top: 275px;
+	right: 400px;
 	z-index: 1;
 	background: #fbfbfb;
-    border-radius: 8px;
-    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-    margin: 6rem auto 8.1rem auto;
-	height: 400px;
-	width: 400px;
+	border-radius: 8px;
+	box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+	height: 375px;
+	margin: 6rem auto 8.1rem auto;
+	width: 329px;
 }
 
-/* .signin-content {
+.signin-content {
 	position: relative;
-} */
+}
 
-/* .sign-txt { */
-	/* display: flex; */
-	/* justify-content: center;
-    background-color: red;
-    height: 20px;
-    width: 50px; */
-/* } */
-
-/* .close-signin {
-	display: flex;
+.sign-txt {
 	justify-self: center;
 }
 
@@ -42,96 +29,48 @@
 	border-radius: 21px;
 	position: relative;
 	bottom: 215px;
-	left: 290px;
-	opacity: 85%;
-} */
+	left: 140px;
+}
 
-/* .close-signin :hover { */
-	/* background-color: lightcyan; */
-	/* border: 0.1em solid #ffffff;
+.close-signin:hover {
+	border: 0.1em solid #ffffff;
 	background-color: lightcyan;
-} */
-
-/* @media screen and (max-width: 800px) {
-	.sign-in {
-		padding-bottom: 10px;
-		margin-top: 10px;
-		padding-top: 10px;
-	}
-
-	.sign-container {
-		padding-left: 80px;
-	}
-}  */
-
-.modal-sign {
-	    position: relative;
-     top: 200px; right: 640px;
-	     /* width: 310px; */
-     /* height: 250px; */
-     /* background-image: linear-gradient(to top left, #ffafbd, #ffc3a0); */
-     /* border-radius: 10px; */
-     z-index: 1;
-     background: #fbfbfb;
-     border-radius: 8px;
-     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-     height: 375px;
-     margin: 6rem auto 8.1rem auto;
-     width: 329px;
- }
-
- .signin-content {
-     position: relative;
-     /* padding: 12px 44px; */
- }
-
- .sign-txt {
-     justify-self: center;
- }
-
- .close-signin {
-	 width: 24px;
-	 border-radius: 21px;
-	 position: relative;
-	 bottom: 215px;
-	 left: 290px;
-	 opacity: 85%;
- }
-
- .close-signin:hover{
-	 border: 0.1em solid #FFFFFF;
-	 background-color: lightcyan;
- }
+}
 
 .sign-btn {
-	 background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
-     border: none;
-     border-radius: 21px;
-     box-shadow: 0px 1px 8px #24c64f;
-     cursor: pointer;
-     color: white;
-     font-family: "Raleway SemiBold", sans-serif;
-     height: 42.3px;
-     margin: 0 auto;
-     margin-top: 50px;
-     transition: 0.25s;
-     width: 153px;
-     position: relative;
-     top: 80px;
- }
+	background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+	border: none;
+	border-radius: 21px;
+	box-shadow: 0px 1px 8px #24c64f;
+	cursor: pointer;
+	color: white;
+	font-family: "Raleway SemiBold", sans-serif;
+	height: 42.3px;
+	margin: 0 auto;
+	margin-top: 50px;
+	transition: 0.25s;
+	width: 153px;
+	position: relative;
+	top: 80px;
+}
 
- .sign-btn:hover {
-     border:0.1em solid #FFFFFF;
-     background-color: lightcyan;
-     transform: scale(1.1);
-     box-shadow: 0px 1px 18px #24c64f;
- }
+.sign-container {
+	height: 17px;
+	width: 200px;
+}
 
- .overlay-signin {
-     height: 2px;
-     margin: -1.1rem auto 0 auto;
-     width: 89px;
-     font-family: "Raleway SemiBold", sans-serif;
-     position: relative;
-     top: 20px;
- } 
+.sign-btn:hover {
+	border: 0.1em solid #ffffff;
+	background-color: lightcyan;
+	transform: scale(1.1);
+	box-shadow: 0px 1px 18px #24c64f;
+}
+
+.overlay-signin {
+	height: 2px;
+	margin: -1.1rem auto 0 auto;
+	width: 89px;
+	font-family: "Raleway SemiBold", sans-serif;
+	position: relative;
+	top: 20px;
+}

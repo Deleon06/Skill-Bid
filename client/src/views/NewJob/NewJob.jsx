@@ -33,19 +33,20 @@ export default function NewJobs(props) {
 
                     <form onSubmit={handleSubmit}>
                         <br />
-                        <label>Name</label>
+                        <h4 className="name">Name</h4>
                         <br />
                         <br />
                         <input className="input"
-                            placeholder="Name"
+                            
                             type="text"
-                            id="name"
+                  id="name"
+                  placeholder="Name"
                             value={input.name}
                             onChange={handleChange}
                         />
                         <br />
                         <br />
-                        <label>Project
+                        <h4 className='project'>Project
                         <br />
                         <br />
                         <select className="dropdown" id="projectType" onChange={handleChange}>
@@ -60,10 +61,10 @@ export default function NewJobs(props) {
                             <option value="Roof">Roof</option>
                             <option value="Wall">Wall</option>
                         </select>
-                        </label>
+                        </h4>
                         <br />
                         <br />
-                        <label>Budget</label>
+                        <h4 className='budget'>Budget</h4>
                         <br />
                         <br />
                         <input className="input"
@@ -74,10 +75,11 @@ export default function NewJobs(props) {
                             onChange={handleChange}
                         />
                         <br />
-                        <br />
-                        <textarea 
+
+                <br />
+                <h4 className='jobDesc'>Job Description</h4>
+                        <textarea className="input"
                         maxLength="100"
-                        className="input"
                         placeholder="Job description"
                         type="text"
                         id="description"

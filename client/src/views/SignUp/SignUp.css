@@ -1,38 +1,66 @@
 .submit-form {
-    background: #fbfbfb;
-    border-radius: 8px;
-    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-    margin: 6rem auto 8.1rem auto;
-	height: 400px;
-	width: 400px;
+	background: rgb(235, 220, 220);
+	border-radius: 8px;
+	box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+	margin: 6rem auto 8.1rem auto;
+	height: 380px;
+	width: 350px;
+	padding-top: 30px;
+	margin-top: 20px;
 }
 
 .signup-btn {
-  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
-  border: none;
-  border-radius: 21px;
-  box-shadow: 0px 1px 8px #24c64f;
-  cursor: pointer;
-  color: white;
-  font-family: "Raleway SemiBold", sans-serif;
-  height: 42.3px;
-  margin: 0 auto;
-  margin-top: 100px;
-  transition: 0.25s;
-  width: 153px;
+	background: linear-gradient(to top, #eecda3, #e393b6);
+	border: none;
+	border-radius: 21px;
+	box-shadow: 0px 1px 8px pink;
+	cursor: pointer;
+	color: white;
+	font-weight: bold;
+	font-family: "Raleway SemiBold", sans-serif;
+	height: 42.3px;
+	margin: 0 auto;
+	margin-top: 35px;
+	transition: 0.25s;
+	width: 153px;
 }
 .signup-btn:hover {
-  	box-shadow: 0px 1px 18px #24c64f;
-	border:0.1em solid #FFFFFF;
-    background-color: lightcyan;
-    transform: scale(1.1);
+	box-shadow: 0px 1px 18px pink;
+	border: 0.1em solid #ffffff;
+	background-color: lightcyan;
+	transform: scale(1.1);
 }
 
-.username {
-    font-family: "Raleway SemiBold", sans-serif;
+#username,
+#email,
+#password {
+	background-image: linear-gradient(to top, #eecda3, #e393b6);
+	width: 130px;
+}
+
+.email {
+	margin-bottom: 10px;
 }
 
 .signup-content {
-    position: relative;
-    top: 50px;
+	color: rgb(181, 122, 122);
+	display: grid;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: -25px;
+	padding-bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+	.signup-content {
+		font-size: 24px;
+	}
+	.submit-form {
+		height: 470px;
+	}
+	#username,
+	#email,
+	#password {
+		height: 20px;
+	}
 }
