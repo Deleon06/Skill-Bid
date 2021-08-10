@@ -31,7 +31,8 @@ export default function SignUp(props) {
             <br />
             <br />
             <form className="submit-form"onSubmit={handleSubmit}>
-            <label className="username"><b>Username</b></label>
+            <label className="username"><b>Create an account</b></label>
+                <br />
                 <br />
                 <div className="signup-content">
                 <input
@@ -41,7 +42,9 @@ export default function SignUp(props) {
                 onChange={handleInput}
                 />
                 <br />
+                <br />
                 <label>Email</label>
+                <br />
                 <br />
                 <input 
                     type="email"
@@ -50,7 +53,9 @@ export default function SignUp(props) {
                     onChange={handleInput}
                 />
                 <br />
+                <br />
                 <label>Password</label>
+                <br />
                 <br />
                 <input 
                     type="password"

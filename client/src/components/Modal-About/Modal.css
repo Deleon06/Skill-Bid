@@ -32,12 +32,6 @@ body.active-modal {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	line-height: 1.4;
-	/* background-image: linear-gradient(to bottom right, #808080, #3fada8);
-    padding: 14px 28px;
-    border-radius: 3px;
-    max-width: 600px;
-    min-width: 300px;
-    border-radius: 15px 50px; */
 	background: #fbfbfb;
 	border-radius: 8px;
 	box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
