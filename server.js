@@ -8,7 +8,7 @@ import routes from "./routes/index.js"
 const app = express();
 const PORT = process.env.PORT || 4567;
 
-const whitelist = ["https://6111b6e0f39f0b000782f529--awesome-jepsen-f2cb4f.netlify.app/api"];
+const whitelist = ["https://awesome-jepsen-f2cb4f.netlify.app/"];
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {

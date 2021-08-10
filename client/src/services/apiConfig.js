@@ -9,7 +9,7 @@ const getToken = () => {
 const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
-      ? "https://git.heroku.com/skill-bid.git"
+      ? "https://skillbidd.herokuapp.com/api"
       : "http://localhost:4567/api"
 })
 
