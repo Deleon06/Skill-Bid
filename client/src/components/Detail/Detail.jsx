@@ -44,42 +44,40 @@ export default function Detail(props) {
 
   return (
     
-        <div id="container">
-      <div className="detail-container">
-            <div>
-            <h1>{job.name}</h1>
-            <hr/>
-            <h2>{job.projectType}</h2>
-            <hr/>
-            <p>{job.description}</p>
-            <hr/>
-            <h2>{job.budget}</h2>
-            </div>
+    <div id="container">
+  
+      {/* <div className="detail-container"> */}
+      <div id="detailContents">
+            <h2 id="jobName">{job.name}</h2>
+            <h4 id="pType">Type: {job.projectType}</h4>
+            <p id="jobDesc">{job.description}</p>
+        <h4 id="budget">Budget: ${job.budget}</h4>
       </div>
-        
+ 
       <div id="form">
-        <label>Contact Seller</label>
-          <form onSubmit={handleSubmit}>
-            <label>Name</label>
+        <form id="contactForm" onSubmit={handleSubmit}>
+        <hr/>
+        <h4 id="contactSeller">Contact Seller</h4><br />
+            <label id="nameLabel">Name</label> <br />
             <input
               type="text"
               id="name"
-              placeholder="Name"
+             
               value={input.name}
               onChange={handleChange}
             />
             <br />
-            <label>Email</label>
+            <label id="emailLabel">Email</label> <br />
             <input
               type="text"
-
+            
               id="email"
               value={input.email}
               onChange={handleChange}
             />
             <br />
 
-            <label>Description</label>
+            <label id="descLabel">Description</label> <br />
             <input
               type="text"
 
@@ -88,9 +86,12 @@ export default function Detail(props) {
             onChange={handleChange}
             />
               <br />
-            <button className="send-btn">Send</button>
+          <button className="send-btn">Send</button>
+          <hr/>
         </form>
       </div>
-      </div>
+        {/* </div> */}
+      
+    </div>
     )
 }

@@ -25,10 +25,15 @@
 	margin-bottom: 40px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 	.sliderName {
 		font-size: 16px;
 		display: block;
 		text-align: center;
+	}
+
+	.SlideDiv {
+		background-image: url('https://pwmskiphire.co.uk/wp-content/uploads/2020/03/99490379_m.jpg');
+		background-size: cover;
 	}
 }

@@ -30,21 +30,22 @@ export default function UpdateJob(props) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setEditedJob((post) => ({
-      ...job,
+    setEditedJob((prevInput) => ({
+      ...prevInput,
       [name]: value,
     }))
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(editedJob)
+    // console.log(editedJob)
+
     await updateJob(id, editedJob)
     history.push("/")
   }
 
   return (
     <Layout user={props.user} setUser={props.setUser}>
-    <div>
+      <div>
         <h2 id='editTitle'>Edit your job</h2><br />
         <div className="jobedit-container">
       <form onSubmit={handleSubmit}>
