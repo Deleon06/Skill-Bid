@@ -75,11 +75,11 @@ export default function NewJobs(props) {
                             onChange={handleChange}
                         />
                         <br />
+
                 <br />
                 <h4 className='jobDesc'>Job Description</h4>
-                <textarea
-                  maxlength="50"
-                  className="input"
+                        <textarea className="input"
+                        maxLength="100"
                         placeholder="Job description"
                         type="text"
                         id="description"
