@@ -10,28 +10,28 @@
 	color: black;
 	text-decoration: none;
 	width: 50%;
-  }
- 
-  a:link {
+}
+
+a:link {
 	color: black;
-  }
-  a:visited {
+}
+a:visited {
 	color: black;
-  }
-  a:hover {
+}
+a:hover {
 	color: inherit;
 	background: inherit;
-  }
-  
-  .disabled {
+}
+
+.disabled {
 	pointer-events: none;
 	opacity: 0.3;
-  }
-  * {
+}
+* {
 	text-decoration: none;
-  }
-  
-  #editButton {
+}
+
+#editButton {
 	width: 100px;
 	border-radius: 5px;
 	margin: 5px;
@@ -39,42 +39,52 @@
 	background-color: lightcyan;
 	justify-content: center;
 	cursor: pointer;
-  }
-  #editButton:hover{
+}
+#editButton:hover {
 	box-shadow: 1px 1px 1px purple;
-  }
+}
 
-  #dltButton {
+#dltButton {
 	width: 100px;
 	margin: 5px;
 	border-radius: 5px;
 	border: 0px;
 	background-color: lightcyan;
 	cursor: pointer;
-  }
+}
 
-  #dltButton:hover {
-	  box-shadow: 1px 1px 1px purple;
-  }
-  
-  @media screen and (max-width: 600px) {
-	.card-container{
+#dltButton:hover {
+	box-shadow: 1px 1px 1px purple;
+}
+
+@media screen and (max-width: 600px) {
+	.card-container {
 		bottom: 0px;
 		position: block;
 		width: 300px;
 		margin: 10px auto;
 		height: 300px;
 	}
-	h1{
+	h1 {
 		font-size: 16px !important;
 	}
 }
-.job, .type, .description {
+.job,
+.type,
+.description {
 	padding: 5x;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-weight: bold;
 	position: relative;
 	top: 17px;
+}
+
+.description {
+	margin-bottom: 50px;
+}
+
+.bid {
+	margin-top: 40px;
 }
 
 .budget {
