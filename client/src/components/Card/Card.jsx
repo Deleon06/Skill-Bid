@@ -97,23 +97,23 @@ export default function Card(props) {
           <div data-aos="zoom-in-up" data-aos-duration="1000" className="card-container"
             id={job.projectType} key={job.name}>
             <Link to={`/post/${job._id}`} key={job._id}> 
-            <div className="job">
+            <div className="card-job">
                 Name of person: {job.name}
             </div>
             <br />
-            <div className="type">
+            <div className="card-type">
                 Type of Job: {job.projectType}
             </div>
             <br />
-            <div className="description">
+            <div className="card-description">
                 Job Description: {job.description}
             </div>
             <br />
-            <div className="budget">
+            <div className="card-budget">
                 Budget: ${ job.budget}
               </div>
               </Link>
-            <div className="bid">
+            <div className="card-bid">
               <Bid job={job}/>
             </div>
             <div className="button-div" accessKey={job.userId}>
