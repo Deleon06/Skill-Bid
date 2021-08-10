@@ -75,7 +75,9 @@ export default function NewJobs(props) {
                         />
                         <br />
                         <br />
-                        <textarea className="input"
+                        <textarea 
+                        maxLength="100"
+                        className="input"
                         placeholder="Job description"
                         type="text"
                         id="description"

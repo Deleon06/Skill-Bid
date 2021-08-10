@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	margin: 20px auto;
-	height: 300px;
+	height: 350px;
 	border: 1px solid lightcyan;
 	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
 	border-radius: 5px;
@@ -66,7 +66,7 @@
 		position: block;
 		width: 300px;
 		margin: 10px auto;
-		height: 275px;
+		height: 300px;
 	}
 	h1{
 		font-size: 16px !important;
