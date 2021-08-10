@@ -1,21 +1,20 @@
 label {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .bid-input {
-    width: 200px;
-    
+  width: 200px;
 }
 
 .bid-btn {
-    width: 100px;
+  width: 100px;
 }
 
 @media screen and (max-width: 600px) {
-	.bid-input {
-		width: 100px;
-	}
-    .bid-btn {
-        width: 100px;
-    }
+  .bid-input {
+    width: 100px;
+  }
+  .bid-btn {
+    width: 100px;
+  }
 }
