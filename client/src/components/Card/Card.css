@@ -7,9 +7,11 @@
 	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
 	border-radius: 5px;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-	color: black;
+	color: gray;
+	border-radius: 30px;
 	text-decoration: none;
 	width: 50%;
+	font-size: 14px;
 }
 
 a:link {
@@ -57,13 +59,20 @@ a:hover {
 	box-shadow: 1px 1px 1px purple;
 }
 
+.card-job,
+.card-type,
+.card-description,
+.card-budget {
+	color: rgb(157, 110, 110);
+}
+
 @media screen and (max-width: 600px) {
 	.card-container {
 		bottom: 0px;
 		position: block;
 		width: 300px;
 		margin: 10px auto;
-		height: 300px;
+		height: 380px;
 	}
 	h1 {
 		font-size: 16px !important;
@@ -80,7 +89,7 @@ a:hover {
 }
 
 .card-description {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 
 .card-bid {
