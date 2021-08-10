@@ -49,20 +49,6 @@ export default function Card(props) {
     }
     }
 
-  const handleSubmit = async (e) => {
-    console.log(props.user.id)
-    console.log(e.target.parentElement.accessKey)
-    if (props.user.id === e.target.parentElement.accessKey) {
-      if (window.confirm("Are you sure you want to delete the job post?")) { 
-      handleDelete(e)
-      history.push("/")
-      document.location.href = "/"
-    }
-        }
-    }
-  
-  
-
 
     return (
         
