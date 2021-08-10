@@ -2,29 +2,19 @@ label {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-bid-input {
-  width: 300px;
-}
-
-bid-btn {
-  width: 10px;
-=======
 .bid-input {
-    width: 200px;
-    
+  width: 200px;
 }
 
 .bid-btn {
-    width: 100px;
+  width: 100px;
 }
 
 @media screen and (max-width: 600px) {
-	.bid-input {
-		width: 100px;
-	}
-    .bid-btn {
-        width: 100px;
-    }
->>>>>>> c2ecf6261f919433deb1f97f6cecf81b948bae95
+  .bid-input {
+    width: 100px;
+  }
+  .bid-btn {
+    width: 100px;
+  }
 }

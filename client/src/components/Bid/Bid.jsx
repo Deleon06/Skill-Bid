@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react'
-=======
 import React, {useState, useEffect} from 'react'
->>>>>>> c2ecf6261f919433deb1f97f6cecf81b948bae95
 import "./Bid.css"
 
 export default function Bid({job}) {
