@@ -39,70 +39,70 @@ return (
                 </form>
                 <form className="budget-filter" onChange={changeBudget}>
                     <label>Filter By Budget</label>
-                    <li><label for="under10000">Budget Under $10,000</label>
+                    <li><label htmlFor="under10000">Budget Under $10,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under10000"
                         value="10000"
                     /></li>
-                    <li><label for="under20000">Budget Under $20,000</label>
+                    <li><label htmlFor="under20000">Budget Under $20,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under20000"
                         value="20000"
                     /></li>
-                    <li><label for="under30000">Budget Under $30,000</label>
+                    <li><label htmlFor="under30000">Budget Under $30,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under30000"
                         value="30000"
                     /></li>
-                    <li><label for="under40000">Budget Under $40,000</label>
+                    <li><label htmlFor="under40000">Budget Under $40,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under40000"
                         value="40000"
                     /></li>
-                    <li><label for="under50000">Budget Under $50,000</label>
+                    <li><label htmlFor="under50000">Budget Under $50,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under50000"
                         value="50000"
                     /></li>
-                    <li><label for="under60000">Budget Under $60,000</label>
+                    <li><label htmlFor="under60000">Budget Under $60,000</label>
                     <input
                         id="budget_input"
                         type="checkbox"
                         name="under60000"
                         value="60000"
                     /></li>
-                    <li><label for="under70000">Budget Under $70,000</label>
+                    <li><label htmlFor="under70000">Budget Under $70,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under70000"
                         value="70000"
                     /></li>
-                    <li><label for="under80000">Budget Under $80,000</label>
+                    <li><label htmlFor="under80000">Budget Under $80,000</label>
                     <input
                         id="budget_input" 
                         type="checkbox"
                         name="under80000"
                         value="80000"
                     /></li>
-                    <li><label for="under90000">Budget Under $90,000</label>
+                    <li><label htmlFor="under90000">Budget Under $90,000</label>
                     <input 
                         id="budget_input"
                         type="checkbox"
                         name="under90000"
                         value="90000"
                     /></li>
-                    <li><label for="under100000">Budget Under $100,000</label>
+                    <li><label htmlFor="under100000">Budget Under $100,000</label>
                     <input 
                         id="budget_input"
                         type="checkbox"

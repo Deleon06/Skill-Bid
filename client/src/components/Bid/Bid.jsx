@@ -6,10 +6,11 @@ export default function Bid({job}) {
     const [id, setId] = useState(job._id);
  
     useEffect(()  => {
-
         const getInfo =  async () => { 
         const data = await window.localStorage.getItem(`bid-${id}`)
+        if(data) {
         setBid(data)
+        }
         }
         if(id){
         getInfo()
