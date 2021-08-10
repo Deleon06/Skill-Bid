@@ -72,7 +72,7 @@ export default function SignIn() {
         <button className="close-signin" onClick={toggleSignIn}>X</button>
         </div>
         </div>
-    )}
+    )} 
         </div>
     )
 }

@@ -44,7 +44,7 @@ export default function Detail(props) {
 
   return (
     
-        <div id="container">
+      <div className="container">
       <div className="detail-container">
             <div>
             <h1>{job.name}</h1>
@@ -54,14 +54,17 @@ export default function Detail(props) {
             <p>{job.description}</p>
             <hr/>
             <h2>{job.budget}</h2>
+            <hr/>
             </div>
       </div>
         
       <div id="form">
-        <label>Contact Seller</label>
+        <label id="contact-sell">Contact Seller</label>
+        <br/>
+        <br/>
           <form onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input
+            <label></label>
+            <input className="name-contact"
               type="text"
               id="name"
               placeholder="Name"
@@ -69,25 +72,26 @@ export default function Detail(props) {
               onChange={handleChange}
             />
             <br />
-            <label>Email</label>
-            <input
+            <br />
+            <label></label>
+            <input className="email-contact"
+              placeholder="Email"
               type="text"
-
               id="email"
               value={input.email}
               onChange={handleChange}
             />
             <br />
-
-            <label>Description</label>
-            <input
+            <br />
+            <label></label>
+            <textarea className="description-contact"
               type="text"
-
               id="description"
+              placeholder="Description"
               value={input.description}
             onChange={handleChange}
             />
-              <br />
+            <br />
             <button className="send-btn">Send</button>
         </form>
       </div>
