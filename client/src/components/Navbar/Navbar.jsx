@@ -45,7 +45,6 @@ const Navbar = (props) => {
             <Menu isOpen={isOpen}>
             <MenuLink href="/sign-up" id="signUp"></MenuLink>
                <SignIn />
-            {/* <MenuLink href="/sign-in">Sign-In</MenuLink> */}
         
             <About />
                 <MenuLink href="/ContactUs" id="contactUs">Contact Us</MenuLink>
@@ -63,8 +62,7 @@ const Nav = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* background-image: linear-gradient(to left,#fbfbfb, #ef629f); */
-    background-image: linear-gradient(to top, #eecda3, #ef629f);
+    background-image: linear-gradient(to top, #CE9D91, #D65F2F);
     position: relative;
     z-index: 20;
     opacity: 0.8;
