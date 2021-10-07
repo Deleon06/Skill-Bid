@@ -8,14 +8,13 @@ export default function UpdateJob(props) {
   const history = useHistory();
   const { id } = useParams();
   const [job, setJob] = useState({});
-
-
   const data = {
     name: "",
     projectType: "",
     description: "",
     budget: "",
   }
+  const [editedJob, setEditedJob] = useState(data);
 
   useEffect(() => {
     const fetchJob = async () => {
@@ -25,8 +24,6 @@ export default function UpdateJob(props) {
     }
     fetchJob()
   }, [id])
-
-  const [editedJob, setEditedJob] = useState(data);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

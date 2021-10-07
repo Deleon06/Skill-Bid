@@ -11,8 +11,6 @@ AOS.init();
 export default function Card(props) {
     const history = useHistory();    
     const [jobs, setJobs] = useState([])
-  const [toggle, setToggle] = useState(false)
-  
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -36,7 +34,6 @@ export default function Card(props) {
     
   async function handleDelete(e) {
         await deleteJob(e.target.value)
-        setToggle(prevState => !prevState)
     }
     
   const handleSubmit = async (e) => {
