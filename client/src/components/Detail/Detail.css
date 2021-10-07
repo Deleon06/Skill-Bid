@@ -5,7 +5,7 @@
 	margin: 6rem auto 8.1rem auto;
 	height: 400px;
 	width: 400px;
-	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
+	background-image: linear-gradient(to top left, #CE9D91, #ffc3a0);
 	box-shadow: 0 5px 8px 0 #ebdbdb33, 0 7px 20px 0 rgba(142, 118, 118, 0.2);
 	border: 1px solid lightcyan;
 }
@@ -15,7 +15,7 @@
 }
 
 #pType {
-	color: rgb(252, 135, 155);
+	color: #CE9D91;
 }
 
 #jobName {
@@ -63,7 +63,7 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	width: 100px;
-	background-image: linear-gradient(to top, #eecda3, #e393b6);
+	background-image: linear-gradient(to top, #eecda3, #CE9D91);
 }
 #email {
 	width: 200px;
@@ -75,10 +75,10 @@
 }
 
 .send-btn {
-	background: linear-gradient(to top, #eecda3, #e393b6);
+	background: linear-gradient(to top, #eecda3, #CE9D91);
 	border: none;
 	border-radius: 21px;
-	box-shadow: 0px 1px 8px pink;
+	box-shadow: 0px 1px 8px #D65F2F;
 	cursor: pointer;
 	color: rgb(157, 140, 140);
 	font-family: "Raleway SemiBold", sans-serif;
@@ -90,9 +90,9 @@
 	width: 153px;
 }
 .send-btn:hover {
-	box-shadow: 0px 1px 18px pink;
+	box-shadow: 0px 1px 18px #D65F2F;
 	border: 0.1em solid #ffffff;
-	background-color: pink;
+	background-color: #D65F2F;
 	transform: scale(1.1);
 }
 
