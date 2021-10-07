@@ -4,7 +4,7 @@
 	margin: 20px auto;
 	height: 350px;
 	border: 1px solid lightcyan;
-	background-image: linear-gradient(to top left, #ffafbd, #ffc3a0);
+	background-image: linear-gradient(to top left, #D65F2F, #CE9D91);
 	border-radius: 5px;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
 	color: gray;
@@ -63,7 +63,7 @@ a:hover {
 .card-type,
 .card-description,
 .card-budget {
-	color: rgb(157, 110, 110);
+	color: #CE9D91;
 }
 
 @media screen and (max-width: 600px) {
