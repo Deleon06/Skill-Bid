@@ -7,7 +7,6 @@ import './UpdateJob.css';
 export default function UpdateJob(props) {
   const history = useHistory();
   const { id } = useParams();
-  const [job, setJob] = useState({});
   const data = {
     name: "",
     projectType: "",
@@ -19,7 +18,6 @@ export default function UpdateJob(props) {
   useEffect(() => {
     const fetchJob = async () => {
       const job = await getJob(id);
-      setJob(job)
       setEditedJob(job)
     }
     fetchJob()
