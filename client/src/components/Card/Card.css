@@ -63,7 +63,7 @@ a:hover {
 .card-type,
 .card-description,
 .card-budget {
-	color: #CE9D91;
+	color: #F9F9F9;
 }
 
 @media screen and (max-width: 600px) {

@@ -13,8 +13,8 @@
 	margin-top: 14px;
 	margin-right: 100px;
 	margin-left: -40px;
-	background-color: pink;
-	color: black;
+	background-color: #D65F2F;
+	color: #F9F9F9;
 	border-radius: 30px;
 	font-family: Arial, Helvetica, sans-serif;
 	cursor: pointer;
@@ -38,7 +38,7 @@
 
 #userName {
 	margin-top: 16px;
-	color: gainsboro;
+	color: #F9F9F9;
 	font-weight: bold;
 	padding-right: 50px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -48,7 +48,7 @@
 #contactUs,
 #signedContactUs,
 #newJob {
-	color: gainsboro;
+	color: #F9F9F9;
 }
 
 @media screen and (max-width: 800px) {

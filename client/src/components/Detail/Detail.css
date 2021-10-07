@@ -15,17 +15,17 @@
 }
 
 #pType {
-	color: #CE9D91;
+	color: #F9F9F9;
 }
 
 #jobName {
 	font-style: italic;
 	opacity: 0.7;
-	color: rgb(133, 119, 119);
+	color: #F9F9F9;
 }
 
 #jobDesc {
-	color: rgb(145, 142, 142);
+	color: #F9F9F9;
 	font-weight: bold;
 	margin-left: auto;
 	margin-right: auto;
@@ -44,7 +44,7 @@
 }
 
 #contactSeller {
-	color: rgb(135, 123, 123);
+	color: #F9F9F9;
 	font-size: 20px;
 	margin-top: -3px;
 	margin-bottom: -5px;
@@ -53,7 +53,7 @@
 #nameLabel,
 #emailLabel,
 #descLabel {
-	color: rgb(171, 154, 154);
+	color: #F9F9F9;
 	font-weight: bold;
 }
 
@@ -63,7 +63,7 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	width: 100px;
-	background-image: linear-gradient(to top, #eecda3, #CE9D91);
+	background-image: linear-gradient(to top, #CE9D91, #D65F2F);
 }
 #email {
 	width: 200px;
@@ -75,12 +75,12 @@
 }
 
 .send-btn {
-	background: linear-gradient(to top, #eecda3, #CE9D91);
+	background: linear-gradient(to top, #CE9D91, #D65F2F);
 	border: none;
 	border-radius: 21px;
 	box-shadow: 0px 1px 8px #D65F2F;
 	cursor: pointer;
-	color: rgb(157, 140, 140);
+	color: #F9F9F9;
 	font-family: "Raleway SemiBold", sans-serif;
 	height: 42.3px;
 	margin: 0 auto;
